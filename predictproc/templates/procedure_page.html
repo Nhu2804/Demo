@@ -1,0 +1,444 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dự đoán Thủ thuật - MEDIPREDICT{% endblock %}
+
+{% block content %}
+<!-- Link file CSS -->
+<link rel="stylesheet" href="{% static 'css/predictproc.css' %}">
+
+<!-- PHẦN 1: HERO HEADER -->
+<section class="predict-hero-proc">
+    <div class="hero-overlay-proc"></div>
+    <div class="container position-relative z-2">
+        <div class="hero-content-proc">
+            <span class="tagline-proc"><i class="fas fa-procedures"></i> AI PHÂN TÍCH</span>
+            <h1>Dự đoán Thủ thuật Y khoa</h1>
+            <p>Nhập các chẩn đoán ICD để AI đề xuất các thủ thuật phù hợp nhất.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PHẦN 2: NỘI DUNG 2 CỘT -->
+<section class="procedure-content">
+    <div class="container two-column-layout-proc">
+
+        <!-- LEFT: FORM NHẬP CHẨN ĐOÁN -->
+        <div class="column-left-proc card-effect-proc">
+            <div class="form-header-custom-proc">
+                <div class="header-icon-box-proc">
+                    <i class="fas fa-file-medical"></i>
+                </div>
+                <div class="header-text-box-proc">
+                    <h2>Dữ liệu chẩn đoán</h2>
+                    <p>Nhập mã ICD-9 hoặc tên bệnh để tìm kiếm</p>
+                </div>
+            </div>
+            <hr class="custom-divider-proc">
+
+            <!-- Ô tìm kiếm -->
+            <div class="autocomplete-box">
+                <input type="text" id="diagInput" class="form-control form-control-lg"
+                       placeholder="Ví dụ: 25000, 4019">
+                <div id="autocompleteList" class="autocomplete-results" style="display:none;"></div>
+            </div>
+
+            <!-- Khu vực tag -->
+            <div id="tagArea" class="diagnosis-tag-area">
+                <p id="emptyMessage" class="empty-state-message">
+                    <i class="fas fa-clipboard-list"></i><br>
+                    Chưa có chẩn đoán nào được chọn.
+                </p>
+            </div>
+
+     
+            <!-- Nút dự đoán -->
+            <button id="predictBtn" class="btn-submit-proc">
+                <span id="predictBtnIcon"><i class="fas fa-brain"></i></span>
+                <span id="predictBtnText">DỰ ĐOÁN THỦ THUẬT</span>
+                <span id="predictBtnSpinner" class="spinner-border spinner-border-sm" role="status" style="display:none;"></span>
+            </button>
+        </div>
+
+        <!-- RIGHT: HIỂN THỊ KẾT QUẢ -->
+        <div class="column-right-proc card-effect-proc">
+            <div class="results-container-proc" id="resultsContainer">
+                <!-- Kết quả sẽ được render vào đây -->
+                <div class="result-placeholder-proc">
+                    <div class="placeholder-icon-wrapper-proc">
+                        <div class="icon-pulse-ring-proc"></div>
+                        <div class="placeholder-img-modern-proc">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    
+                    <h4 class="empty-title-proc">AI Sẵn sàng</h4>
+                    <p class="empty-desc-proc">
+                        Chưa có dữ liệu phân tích. <br>
+                        Vui lòng nhập chẩn đoán bên trái và bấm 
+                        <strong>"Dự đoán Thủ thuật"</strong>.
+                    </p>
+                    
+                    <!-- Mũi tên chỉ dẫn -->
+                    <div class="instruction-arrow-proc">
+                        <i class="fas fa-long-arrow-alt-left"></i> Nhập bên này
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // =========================
+    // KHAI BÁO BIẾN & LẤY DỮ LIỆU
+    // =========================
+    let diagList = [];
+    let hasResult = false;  // ➜ phát hiện đã có kết quả
+    const selectedDiagnoses = new Map();
+
+    const input = document.getElementById("diagInput");
+    const listBox = document.getElementById("autocompleteList");
+    const tagArea = document.getElementById("tagArea");
+    const emptyMessage = document.getElementById("emptyMessage");
+    const predictBtn = document.getElementById("predictBtn");
+    const predictBtnText = document.getElementById("predictBtnText");
+    const predictBtnSpinner = document.getElementById("predictBtnSpinner");
+    const resultsContainer = document.getElementById("resultsContainer");
+
+    fetch("{% static 'data/diag_list_1200.json' %}")
+        .then(response => response.json())
+        .then(data => diagList = data)
+        .catch(err => console.error("Lỗi tải diag_list:", err));
+
+    // =========================
+    // HÀM: CHUYỂN NÚT ➜ KIỂM TRA MỚI
+    // =========================
+    function switchPredictButtonToReset(){
+        hasResult = true;
+
+        // XÓA icon cũ nếu có
+        const icon = predictBtn.querySelector('i');
+        if (icon) icon.remove();
+
+        predictBtnText.innerHTML = `<i class="fas fa-redo"></i> KIỂM TRA MỚI`;
+        predictBtn.classList.add('btn-reset-proc');
+        predictBtn.classList.remove('btn-submit-proc');
+
+        // Disable input ICD
+        input.disabled = true;
+
+        // Ẩn nút xóa tag
+        document.querySelectorAll(".remove-tag-btn").forEach(btn => {
+            btn.style.display = "none";
+        });
+
+        // Đổi onclick
+        predictBtn.onclick = function(e){
+            e.preventDefault();
+            window.location.href = window.location.pathname;
+        };
+    }
+
+    // =========================
+    // HÀM RENDER
+    // =========================
+    const renderTags = () => {
+        tagArea.innerHTML = '';
+        if (selectedDiagnoses.size === 0) {
+            emptyMessage.style.display = 'block';
+            tagArea.appendChild(emptyMessage);
+        } else {
+            emptyMessage.style.display = 'none';
+            selectedDiagnoses.forEach((item, code) => {
+                const tag = document.createElement('div');
+                tag.className = 'diagnosis-tag';
+                tag.dataset.code = code;
+                tag.innerHTML = `
+                    <div class="tag-info">
+                        <span class="tag-badge">${item.code}</span>
+                        <span class="tag-name" title="${item.name}">${item.name}</span>
+                    </div>
+                    <button class="remove-tag-btn" title="Xóa">
+                        <i class="fas fa-times"></i>
+                    </button>
+                `;
+                tagArea.appendChild(tag);
+
+                tag.querySelector('.remove-tag-btn').onclick = () => {
+                    selectedDiagnoses.delete(code);
+                    renderTags();
+                };
+            });
+        }
+    };
+
+    const renderResults = (results) => {
+        if (!results || results.length === 0) {
+            resultsContainer.innerHTML = `
+                <div class="results-container-proc">
+                    <div class="results-header-proc">
+                        <div class="header-badge-proc">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <h3>Không tìm thấy thủ thuật</h3>
+                    </div>
+                    <div class="no-results-proc">
+                        <i class="fas fa-search"></i>
+                        <p>Không tìm thấy thủ thuật phù hợp cho các chẩn đoán đã chọn.</p>
+                    </div>
+                    <div class="dash-footer-proc">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Kết quả chỉ mang tính tham khảo y khoa.</span>
+                    </div>
+                </div>`;
+            switchPredictButtonToReset();  // ✔ chạy reset
+            return;
+        }
+        results.sort((a, b) => b.score - a.score);
+
+        const itemsHTML = results.map(p => {
+            // Mở ngoặc nhọn { ở trên để viết code logic JS
+            
+            // 1. Logic chọn màu
+            let colorClass = '#6c757d'; // Mặc định: Xám
+            if(p.score >= 70) {
+                colorClass = '#28a745'; // Xanh lá
+            } else if(p.score >= 40) {
+                colorClass = '#ffc107'; // Vàng
+            }
+
+            // 2. Return về chuỗi HTML
+            return `
+                <div class="result-item-proc">
+                    <div class="result-icon-proc">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="result-content-proc" style="width: 100%;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                            <div class="result-code-proc">${p.code}</div>
+                            <div style="font-weight: bold; color: ${colorClass}; font-size: 0.95rem;">
+                                ${p.score}% <i class="fas fa-chart-pie" style="font-size: 0.8em;"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="result-name-proc">${p.name}</div>
+                        
+                        <!-- Thanh tiến trình -->
+                        <div style="width: 100%; background: #e9ecef; height: 5px; border-radius: 3px; margin-top: 8px;">
+                            <div style="width: ${p.score}%; background: ${colorClass}; height: 100%; border-radius: 3px; transition: width 1s ease;"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        resultsContainer.innerHTML = `
+            <div class="results-container-proc">
+                <div class="results-header-proc">
+                    <div class="header-badge-proc">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div>
+                        <h3>Kết quả Dự đoán</h3>
+                    </div>
+                </div>
+                
+                <div class="stats-card-proc">
+                    <div class="stats-value-proc">${results.length}</div>
+                    <div class="stats-label-proc">Thủ thuật đề xuất</div>
+                </div>
+                
+                <div class="results-list-proc">
+                    ${itemsHTML}
+                </div>
+                
+                <div class="dash-footer-proc">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Kết quả chỉ mang tính tham khảo y khoa.</span>
+                </div>
+            </div>
+        `;
+
+        switchPredictButtonToReset(); // ✔ chạy reset
+    };
+
+    // =========================
+    // XỬ LÝ SỰ KIỆN
+    // =========================
+    const addDiagnosis = (item) => {
+        selectedDiagnoses.set(item.code, item);
+        input.value = '';
+        listBox.style.display = 'none';
+        renderTags();
+    };
+
+    // Dán ICD
+    input.addEventListener("paste", function(e) {
+        e.preventDefault();
+        let pasteData = (e.clipboardData || window.clipboardData).getData("text");
+        if (!pasteData) return;
+
+        let parts = pasteData.split(/[, \n\t]+/);
+        let added = 0;
+        parts.forEach(code => {
+            code = code.trim();
+            if (code) {
+                const item = diagList.find(d => d.code === code);
+                if (item) {
+                    addDiagnosis(item);
+                    added++;
+                }
+            }
+        });
+        if (added > 0) {
+            input.value = '';
+        }
+    });
+
+    // Enter nhập nhiều ICD
+    input.addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            if(hasResult) return;
+
+            const raw = input.value.trim();
+            if (!raw) return;
+            
+            let parts = raw.split(/[, ]+/);
+            parts.forEach(code => {
+                code = code.trim();
+                const item = diagList.find(d => d.code === code);
+                if (item) {
+                    addDiagnosis(item);
+                }
+            });
+            input.value = '';
+        }
+    });
+
+    // Autocomplete
+    input.addEventListener('input', function() {
+        if(hasResult) return;
+
+        const text = this.value.toLowerCase().trim();
+        if (!text) { 
+            listBox.style.display = 'none'; 
+            return; 
+        }
+
+        const filtered = diagList.filter(item =>
+            !selectedDiagnoses.has(item.code) &&
+            (item.code.toLowerCase().includes(text) ||
+             (item.name && item.name.toLowerCase().includes(text)))
+        ).slice(0, 7);
+
+        if (filtered.length === 0) {
+            listBox.style.display = 'none';
+            return;
+        }
+
+        listBox.innerHTML = filtered.map(item => `
+            <div class="autocomplete-item" data-code="${item.code}">
+                <strong>${item.code}</strong>
+                <span>${item.name}</span>
+            </div>`
+        ).join('');
+
+        listBox.querySelectorAll('.autocomplete-item').forEach(div => {
+            div.onclick = () => {
+                const item = diagList.find(i => i.code === div.dataset.code);
+                if (item) addDiagnosis(item);
+            };
+        });
+        listBox.style.display = 'block';
+    });
+    
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest('.autocomplete-box')) {
+            listBox.style.display = "none";
+        }
+    });
+
+    // =========================
+    // CLICK SUBMIT
+    // =========================
+    predictBtn.addEventListener('click', async () => {
+        if(hasResult) return;
+
+        const codes = Array.from(selectedDiagnoses.keys());
+        if (codes.length === 0) {
+            alert("Vui lòng thêm ít nhất một chẩn đoán!");
+            input.focus();
+            return;
+        }
+        
+        // Bật loading
+        predictBtn.disabled = true;
+        predictBtnText.textContent = 'Đang phân tích...';
+        predictBtnSpinner.style.display = 'inline-block';
+
+        resultsContainer.innerHTML = `
+            <div class="results-container-proc">
+                <div class="result-placeholder-proc">
+                    <div class="placeholder-icon-wrapper-proc">
+                        <div class="icon-pulse-ring-proc"></div>
+                        <div class="placeholder-img-modern-proc">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </div>
+                    <h4 class="empty-title-proc">Đang phân tích</h4>
+                    <p class="empty-desc-proc">AI đang xử lý ${codes.length} chẩn đoán...</p>
+                </div>
+            </div>
+        `;
+
+        try {
+            const formData = new URLSearchParams({ icd_codes: codes.join(',') });
+            const response = await fetch("{% url 'predictproc:procedure_api' %}", {
+                method: "POST",
+                headers: { 
+                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: formData
+            });
+            
+            if (!response.ok) throw new Error('Network response was not ok');
+            
+            const data = await response.json();
+            renderResults(data.results || []);
+            
+        } catch (error) {
+            console.error('Error:', error);
+            resultsContainer.innerHTML = `
+                <div class="results-container-proc">
+                    <div class="results-header-proc">
+                        <div class="header-badge-proc" style="background: #ffebee; color: #d32f2f;">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Lỗi phân tích</h3>
+                    </div>
+                    <div class="no-results-proc">
+                        <i class="fas fa-times-circle" style="color: #d32f2f;"></i>
+                        <p>Có lỗi xảy ra khi phân tích. Vui lòng thử lại sau.</p>
+                    </div>
+                </div>`;
+            switchPredictButtonToReset();
+        } finally {
+            // Tắt loading
+            predictBtnSpinner.style.display = 'none';
+            predictBtn.disabled = false;
+        }
+    });
+
+    // Focus input khi load trang
+    setTimeout(() => {
+        input.focus();
+    }, 500);
+});
+</script>
+
+{% endblock %}

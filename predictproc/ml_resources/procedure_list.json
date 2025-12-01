@@ -1,0 +1,3438 @@
+[
+    {
+        "code": "8872",
+        "name": "Dx ultrasound-heart"
+    },
+    {
+        "code": "3961",
+        "name": "Extracorporeal circulat"
+    },
+    {
+        "code": "3571",
+        "name": "Atria septa def rep NEC"
+    },
+    {
+        "code": "3731",
+        "name": "Pericardiectomy"
+    },
+    {
+        "code": "3893",
+        "name": "Venous cath NEC"
+    },
+    {
+        "code": "3761",
+        "name": "Pulsation balloon implan"
+    },
+    {
+        "code": "66",
+        "name": "Lingual thyroid excision"
+    },
+    {
+        "code": "3606",
+        "name": "Ins nondrug elut cor st"
+    },
+    {
+        "code": "47",
+        "name": "Insert 3 vascular stents"
+    },
+    {
+        "code": "3895",
+        "name": "Ven cath renal dialysis"
+    },
+    {
+        "code": "3995",
+        "name": "Hemodialysis"
+    },
+    {
+        "code": "3723",
+        "name": "Rt/left heart card cath"
+    },
+    {
+        "code": "8856",
+        "name": "Coronar arteriogr-2 cath"
+    },
+    {
+        "code": "9904",
+        "name": "Packed cell transfusion"
+    },
+    {
+        "code": "9744",
+        "name": "Nonop remov hrt asst sys"
+    },
+    {
+        "code": "3950",
+        "name": "Angio oth non-coronary"
+    },
+    {
+        "code": "42",
+        "name": "Periph nerve destruction"
+    },
+    {
+        "code": "14",
+        "name": "Injection oxazolidinone"
+    },
+    {
+        "code": "8961",
+        "name": "Arterial pressure monit"
+    },
+    {
+        "code": "3615",
+        "name": "1 int mam-cor art bypass"
+    },
+    {
+        "code": "9905",
+        "name": "Platelet transfusion"
+    },
+    {
+        "code": "9907",
+        "name": "Serum transfusion NEC"
+    },
+    {
+        "code": "3613",
+        "name": "Aortocor bypas-3 cor art"
+    },
+    {
+        "code": "151",
+        "name": "Ex cereb meningeal les"
+    },
+    {
+        "code": "8852",
+        "name": "Rt heart angiocardiogram"
+    },
+    {
+        "code": "3783",
+        "name": "Int insert dual-cham dev"
+    },
+    {
+        "code": "3772",
+        "name": "Int inser lead atri-vent"
+    },
+    {
+        "code": "8945",
+        "name": "Pacemaker rate check"
+    },
+    {
+        "code": "8845",
+        "name": "Contrast renal arteriogr"
+    },
+    {
+        "code": "8853",
+        "name": "Lt heart angiocardiogram"
+    },
+    {
+        "code": "3614",
+        "name": "Aortcor bypas-4+ cor art"
+    },
+    {
+        "code": "3722",
+        "name": "Left heart cardiac cath"
+    },
+    {
+        "code": "3403",
+        "name": "Reopen thoracotomy site"
+    },
+    {
+        "code": "8674",
+        "name": "Attach pedicle graft NEC"
+    },
+    {
+        "code": "7761",
+        "name": "Exc chest cage bone les"
+    },
+    {
+        "code": "7851",
+        "name": "Int fixation-chest cage"
+    },
+    {
+        "code": "3932",
+        "name": "Suture of vein"
+    },
+    {
+        "code": "3479",
+        "name": "Other chest wall repair"
+    },
+    {
+        "code": "5361",
+        "name": "Open incis hern-grft NEC"
+    },
+    {
+        "code": "7861",
+        "name": "Remov imp dev-chest cage"
+    },
+    {
+        "code": "544",
+        "name": "Destruct peritoneal tiss"
+    },
+    {
+        "code": "9977",
+        "name": "App adhesion barrier sub"
+    },
+    {
+        "code": "9604",
+        "name": "Insert endotracheal tube"
+    },
+    {
+        "code": "9671",
+        "name": "Cont inv mec ven <96 hrs"
+    },
+    {
+        "code": "9915",
+        "name": "Parent infus nutrit sub"
+    },
+    {
+        "code": "4513",
+        "name": "Sm bowel endoscopy NEC"
+    },
+    {
+        "code": "9925",
+        "name": "Inject ca chemother NEC"
+    },
+    {
+        "code": "4104",
+        "name": "Auto hem stem ct w/o pur"
+    },
+    {
+        "code": "8843",
+        "name": "Contr pulmon arteriogram"
+    },
+    {
+        "code": "4131",
+        "name": "Bone marrow biopsy"
+    },
+    {
+        "code": "966",
+        "name": "Entral infus nutrit sub"
+    },
+    {
+        "code": "8611",
+        "name": "Closed bx skin/subq tiss"
+    },
+    {
+        "code": "4675",
+        "name": "Suture lg bowel lacerat"
+    },
+    {
+        "code": "22",
+        "name": "IVUS intrathoracic ves"
+    },
+    {
+        "code": "9910",
+        "name": "Inject/inf thrombo agent"
+    },
+    {
+        "code": "9912",
+        "name": "Allergy immunization"
+    },
+    {
+        "code": "159",
+        "name": "Other brain excision"
+    },
+    {
+        "code": "3891",
+        "name": "Arterial catheterization"
+    },
+    {
+        "code": "3845",
+        "name": "Resect thorac ves w repl"
+    },
+    {
+        "code": "3521",
+        "name": "Opn/oth rep aort vlv-tis"
+    },
+    {
+        "code": "3611",
+        "name": "Aortocor bypas-1 cor art"
+    },
+    {
+        "code": "3897",
+        "name": "CV cath plcmt w guidance"
+    },
+    {
+        "code": "3142",
+        "name": "Larygnoscopy/tracheoscop"
+    },
+    {
+        "code": "311",
+        "name": "Temporary tracheostomy"
+    },
+    {
+        "code": "9390",
+        "name": "Non-invasive mech vent"
+    },
+    {
+        "code": "4311",
+        "name": "Percu endosc gastrostomy"
+    },
+    {
+        "code": "9672",
+        "name": "Cont inv mec ven 96+ hrs"
+    },
+    {
+        "code": "3324",
+        "name": "Closed bronchial biopsy"
+    },
+    {
+        "code": "8849",
+        "name": "Contrast arteriogram NEC"
+    },
+    {
+        "code": "3942",
+        "name": "Revis ren dialysis shunt"
+    },
+    {
+        "code": "4443",
+        "name": "Endosc control gast hem"
+    },
+    {
+        "code": "391",
+        "name": "Intra-abd venous shunt"
+    },
+    {
+        "code": "8964",
+        "name": "Pulmon art wedge monitor"
+    },
+    {
+        "code": "3491",
+        "name": "Thoracentesis"
+    },
+    {
+        "code": "3990",
+        "name": "Ins non-d-e non-cor stnt"
+    },
+    {
+        "code": "8841",
+        "name": "Contr cerebr arteriogram"
+    },
+    {
+        "code": "3812",
+        "name": "Head & neck endarter NEC"
+    },
+    {
+        "code": "8842",
+        "name": "Contrast aortogram"
+    },
+    {
+        "code": "45",
+        "name": "Peripheral nerve graft"
+    },
+    {
+        "code": "41",
+        "name": "Procedure-two vessels"
+    },
+    {
+        "code": "8848",
+        "name": "Contrast arteriogram-leg"
+    },
+    {
+        "code": "44",
+        "name": "Proc-vessel bifurcation"
+    },
+    {
+        "code": "3957",
+        "name": "Rep vess w synth patch"
+    },
+    {
+        "code": "3818",
+        "name": "Lower limb endarterect"
+    },
+    {
+        "code": "5472",
+        "name": "Abdomen wall repair NEC"
+    },
+    {
+        "code": "4573",
+        "name": "Opn rt hemicolectomy NEC"
+    },
+    {
+        "code": "4621",
+        "name": "Temporary ileostomy"
+    },
+    {
+        "code": "3323",
+        "name": "Other bronchoscopy"
+    },
+    {
+        "code": "8826",
+        "name": "Skel xray-pelvis/hip NEC"
+    },
+    {
+        "code": "7781",
+        "name": "Oth chest cage ostectomy"
+    },
+    {
+        "code": "8622",
+        "name": "Exc wound debridement"
+    },
+    {
+        "code": "7841",
+        "name": "Oth chest cage rep/plast"
+    },
+    {
+        "code": "8382",
+        "name": "Muscle or fascia graft"
+    },
+    {
+        "code": "343",
+        "name": "Destruct mediastin les"
+    },
+    {
+        "code": "3522",
+        "name": "Opn/oth rep aortic valve"
+    },
+    {
+        "code": "554",
+        "name": "Partial nephrectomy"
+    },
+    {
+        "code": "722",
+        "name": "Unilateral adrenalectomy"
+    },
+    {
+        "code": "5551",
+        "name": "Nephroureterectomy"
+    },
+    {
+        "code": "403",
+        "name": "Regional lymph node exc"
+    },
+    {
+        "code": "4579",
+        "name": "Prt lg intes exc NEC/NOS"
+    },
+    {
+        "code": "4439",
+        "name": "Gastroenterostomy NEC"
+    },
+    {
+        "code": "4562",
+        "name": "Part sm bowel resect NEC"
+    },
+    {
+        "code": "4574",
+        "name": "Opn transv colon res NEC"
+    },
+    {
+        "code": "4641",
+        "name": "Sm bowel stoma revision"
+    },
+    {
+        "code": "3954",
+        "name": "Re-entry operation"
+    },
+    {
+        "code": "3926",
+        "name": "Intra-abdomin shunt NEC"
+    },
+    {
+        "code": "9920",
+        "name": "Inj/inf platelet inhibit"
+    },
+    {
+        "code": "13",
+        "name": "Inject/infus nesiritide"
+    },
+    {
+        "code": "3451",
+        "name": "Decortication of lung"
+    },
+    {
+        "code": "3844",
+        "name": "Resect abdm aorta w repl"
+    },
+    {
+        "code": "3959",
+        "name": "Repair of vessel NEC"
+    },
+    {
+        "code": "9605",
+        "name": "Resp tract intubat NEC"
+    },
+    {
+        "code": "9900",
+        "name": "Periop aut trans hol bld"
+    },
+    {
+        "code": "124",
+        "name": "Other craniotomy"
+    },
+    {
+        "code": "8659",
+        "name": "Skin closure NEC"
+    },
+    {
+        "code": "17",
+        "name": "Infusion of vasopressor"
+    },
+    {
+        "code": "9929",
+        "name": "Inject/infuse NEC"
+    },
+    {
+        "code": "8847",
+        "name": "Contr abd arteriogrm NEC"
+    },
+    {
+        "code": "5503",
+        "name": "Percu nephrostm w/o frag"
+    },
+    {
+        "code": "9634",
+        "name": "Gastric tube irrigat NEC"
+    },
+    {
+        "code": "598",
+        "name": "Ureteral catheterization"
+    },
+    {
+        "code": "5593",
+        "name": "Replace nephrostomy tube"
+    },
+    {
+        "code": "8775",
+        "name": "Percutaneous pyelogram"
+    },
+    {
+        "code": "3972",
+        "name": "Endovasc embol hd/nk ves"
+    },
+    {
+        "code": "3512",
+        "name": "Opn mitral valvuloplasty"
+    },
+    {
+        "code": "4011",
+        "name": "Lymphatic struct biopsy"
+    },
+    {
+        "code": "3524",
+        "name": "Opn/oth rep mitral valve"
+    },
+    {
+        "code": "331",
+        "name": "Incision of lung"
+    },
+    {
+        "code": "9906",
+        "name": "Coag factor transfusion"
+    },
+    {
+        "code": "3607",
+        "name": "Ins drug-elut coronry st"
+    },
+    {
+        "code": "8628",
+        "name": "Nonexcis debridement wnd"
+    },
+    {
+        "code": "8191",
+        "name": "Arthrocentesis"
+    },
+    {
+        "code": "341",
+        "name": "Incision of mediastinum"
+    },
+    {
+        "code": "5059",
+        "name": "Liver transplant NEC"
+    },
+    {
+        "code": "5137",
+        "name": "Hepatic duct-gi anastom"
+    },
+    {
+        "code": "5011",
+        "name": "Closed liver biopsy"
+    },
+    {
+        "code": "8754",
+        "name": "Cholangiogram NEC"
+    },
+    {
+        "code": "8864",
+        "name": "Portal contr phlebogram"
+    },
+    {
+        "code": "93",
+        "name": "Other lacrimal gland ops"
+    },
+    {
+        "code": "2101",
+        "name": "Ant nasal pack for epist"
+    },
+    {
+        "code": "46",
+        "name": "Periph nerve transposit"
+    },
+    {
+        "code": "4523",
+        "name": "Colonoscopy"
+    },
+    {
+        "code": "40",
+        "name": "Procedure-one vessel"
+    },
+    {
+        "code": "8857",
+        "name": "Coronary arteriogram NEC"
+    },
+    {
+        "code": "3974",
+        "name": "Endo rem obs hd/neck ves"
+    },
+    {
+        "code": "4593",
+        "name": "Small-to-large bowel NEC"
+    },
+    {
+        "code": "5491",
+        "name": "Percu abdominal drainage"
+    },
+    {
+        "code": "4525",
+        "name": "Clos large bowel biopsy"
+    },
+    {
+        "code": "4542",
+        "name": "Endo polpectomy lrge int"
+    },
+    {
+        "code": "387",
+        "name": "Interruption vena cava"
+    },
+    {
+        "code": "9607",
+        "name": "Insert gastric tube NEC"
+    },
+    {
+        "code": "4233",
+        "name": "Endosc destruc esoph les"
+    },
+    {
+        "code": "3971",
+        "name": "Endo imp oth grf abd aor"
+    },
+    {
+        "code": "3979",
+        "name": "Oth endo proc oth vessel"
+    },
+    {
+        "code": "4639",
+        "name": "Enterostomy NEC"
+    },
+    {
+        "code": "3404",
+        "name": "Insert intercostal cath"
+    },
+    {
+        "code": "3492",
+        "name": "Inject into thorax cavit"
+    },
+    {
+        "code": "9921",
+        "name": "Inject antibiotic"
+    },
+    {
+        "code": "8411",
+        "name": "Toe amputation"
+    },
+    {
+        "code": "2242",
+        "name": "Frontal sinusectomy"
+    },
+    {
+        "code": "2263",
+        "name": "Ethmoidectomy"
+    },
+    {
+        "code": "16",
+        "name": "Excise skull lesion"
+    },
+    {
+        "code": "123",
+        "name": "Reopen craniotomy site"
+    },
+    {
+        "code": "8345",
+        "name": "Other myectomy"
+    },
+    {
+        "code": "9229",
+        "name": "Radiotherapeut proc NEC"
+    },
+    {
+        "code": "4519",
+        "name": "Sm bowel dx proc NEC"
+    },
+    {
+        "code": "539",
+        "name": "Other hernia repair"
+    },
+    {
+        "code": "5459",
+        "name": "Oth periton adhesiolysis"
+    },
+    {
+        "code": "9955",
+        "name": "Vaccination NEC"
+    },
+    {
+        "code": "9983",
+        "name": "Other phototherapy"
+    },
+    {
+        "code": "3804",
+        "name": "Incision of aorta"
+    },
+    {
+        "code": "7935",
+        "name": "Open reduc-int fix femur"
+    },
+    {
+        "code": "8855",
+        "name": "Coronar arteriogr-1 cath"
+    },
+    {
+        "code": "7865",
+        "name": "Remove imp device-femur"
+    },
+    {
+        "code": "7805",
+        "name": "Bone graft to femur"
+    },
+    {
+        "code": "8968",
+        "name": "Oth cardiac mon output"
+    },
+    {
+        "code": "3778",
+        "name": "Inser temp pacemaker sys"
+    },
+    {
+        "code": "3764",
+        "name": "Remve ext hrt assist sys"
+    },
+    {
+        "code": "8962",
+        "name": "Cvp monitoring"
+    },
+    {
+        "code": "5201",
+        "name": "Cath drain-pancreat cyst"
+    },
+    {
+        "code": "5122",
+        "name": "Cholecystectomy"
+    },
+    {
+        "code": "8753",
+        "name": "Intraoper cholangiogram"
+    },
+    {
+        "code": "430",
+        "name": "Gastrotomy"
+    },
+    {
+        "code": "3998",
+        "name": "Hemorrhage control NOS"
+    },
+    {
+        "code": "5349",
+        "name": "Open rep umbil hern NEC"
+    },
+    {
+        "code": "5185",
+        "name": "Endosc sphincterotomy"
+    },
+    {
+        "code": "5187",
+        "name": "Endosc inser stent bile"
+    },
+    {
+        "code": "9960",
+        "name": "Cardiopulm resuscita NOS"
+    },
+    {
+        "code": "3808",
+        "name": "Lower limb artery incis"
+    },
+    {
+        "code": "3949",
+        "name": "Vasc proc revision NEC"
+    },
+    {
+        "code": "3848",
+        "name": "Leg artery resec w repla"
+    },
+    {
+        "code": "8604",
+        "name": "Other skin & subq i & d"
+    },
+    {
+        "code": "3927",
+        "name": "Dialysis arteriovenostom"
+    },
+    {
+        "code": "3612",
+        "name": "Aortocor bypas-2 cor art"
+    },
+    {
+        "code": "9749",
+        "name": "Remov thor ther dev NEC"
+    },
+    {
+        "code": "9962",
+        "name": "Heart countershock NEC"
+    },
+    {
+        "code": "8103",
+        "name": "Ot cerv fusion post/post"
+    },
+    {
+        "code": "9342",
+        "name": "Other spinal traction"
+    },
+    {
+        "code": "9606",
+        "name": "Insert sengstaken tube"
+    },
+    {
+        "code": "11",
+        "name": "Infus drotrecogin alfa"
+    },
+    {
+        "code": "4516",
+        "name": "Egd with closed biopsy"
+    },
+    {
+        "code": "12",
+        "name": "Adm inhal nitric oxide"
+    },
+    {
+        "code": "3721",
+        "name": "Rt heart cardiac cath"
+    },
+    {
+        "code": "8605",
+        "name": "Removal fb/dev from skin"
+    },
+    {
+        "code": "8607",
+        "name": "Insert vasc access dev"
+    },
+    {
+        "code": "8963",
+        "name": "Pulmon art press monitor"
+    },
+    {
+        "code": "3539",
+        "name": "Tiss adj to valv ops NEC"
+    },
+    {
+        "code": "3922",
+        "name": "Aorta-subclv-carot bypas"
+    },
+    {
+        "code": "5794",
+        "name": "Insert indwelling cath"
+    },
+    {
+        "code": "5369",
+        "name": "Opn hern ant abd-grf NEC"
+    },
+    {
+        "code": "3712",
+        "name": "Pericardiotomy"
+    },
+    {
+        "code": "5351",
+        "name": "Incisional hernia repair"
+    },
+    {
+        "code": "4442",
+        "name": "Suture duoden ulcer site"
+    },
+    {
+        "code": "5012",
+        "name": "Open liver biopsy"
+    },
+    {
+        "code": "5151",
+        "name": "Common duct exploration"
+    },
+    {
+        "code": "9755",
+        "name": "Remov biliary/liver tube"
+    },
+    {
+        "code": "5112",
+        "name": "Percu bx gb/bile duct"
+    },
+    {
+        "code": "5198",
+        "name": "Oth perc proc bil trct"
+    },
+    {
+        "code": "8876",
+        "name": "Dx ultrasound-abdomen"
+    },
+    {
+        "code": "9608",
+        "name": "Insert intestinal tube"
+    },
+    {
+        "code": "5102",
+        "name": "Trocar cholecystostomy"
+    },
+    {
+        "code": "5188",
+        "name": "Endosc remove bile stone"
+    },
+    {
+        "code": "4319",
+        "name": "Other gastrostomy"
+    },
+    {
+        "code": "3322",
+        "name": "Fiber-optic bronchoscopy"
+    },
+    {
+        "code": "3523",
+        "name": "Opn/oth rep mtrl vlv-tis"
+    },
+    {
+        "code": "3733",
+        "name": "Exc/dest hrt lesion open"
+    },
+    {
+        "code": "9462",
+        "name": "Alcohol detoxification"
+    },
+    {
+        "code": "4561",
+        "name": "Mult seg sm bowel excis"
+    },
+    {
+        "code": "3409",
+        "name": "Other pleural incision"
+    },
+    {
+        "code": "9648",
+        "name": "Indwell cath irrig NEC"
+    },
+    {
+        "code": "7936",
+        "name": "Op red-int fix tib/fibul"
+    },
+    {
+        "code": "7966",
+        "name": "Debrid opn fx-tibia/fib"
+    },
+    {
+        "code": "102",
+        "name": "Ventricl shunt tube punc"
+    },
+    {
+        "code": "131",
+        "name": "Incise cerebral meninges"
+    },
+    {
+        "code": "3929",
+        "name": "Vasc shunt & bypass NEC"
+    },
+    {
+        "code": "4223",
+        "name": "Esophagoscopy NEC"
+    },
+    {
+        "code": "5169",
+        "name": "Bile duct excision NEC"
+    },
+    {
+        "code": "9705",
+        "name": "Repl stent in bile duct"
+    },
+    {
+        "code": "9922",
+        "name": "Inject anti-infect NEC"
+    },
+    {
+        "code": "1474",
+        "name": "Mech vitrectomy NEC"
+    },
+    {
+        "code": "1631",
+        "name": "Eye evisc w synch implan"
+    },
+    {
+        "code": "9961",
+        "name": "Atrial cardioversion"
+    },
+    {
+        "code": "9914",
+        "name": "Injct/inf immunoglobulin"
+    },
+    {
+        "code": "5110",
+        "name": "Endosc retro cholangiopa"
+    },
+    {
+        "code": "8914",
+        "name": "Electroencephalogram"
+    },
+    {
+        "code": "370",
+        "name": "Pericardiocentesis"
+    },
+    {
+        "code": "3726",
+        "name": "Cath base invasv ep test"
+    },
+    {
+        "code": "3727",
+        "name": "Cardiac mapping"
+    },
+    {
+        "code": "3734",
+        "name": "Exc/des hrt les,endovasc"
+    },
+    {
+        "code": "8105",
+        "name": "Drsl/dslmb fus post/post"
+    },
+    {
+        "code": "34",
+        "name": "Excis spinal cord lesion"
+    },
+    {
+        "code": "309",
+        "name": "Spinal canal explor NEC"
+    },
+    {
+        "code": "8163",
+        "name": "Fus/refus 4-8 vertebrae"
+    },
+    {
+        "code": "5184",
+        "name": "Endosc dilation ampulla"
+    },
+    {
+        "code": "4611",
+        "name": "Temporary colostomy"
+    },
+    {
+        "code": "4575",
+        "name": "Opn lft hemicolectmy NEC"
+    },
+    {
+        "code": "242",
+        "name": "Gingivoplasty"
+    },
+    {
+        "code": "8960",
+        "name": "Cnt intraart bld gas mon"
+    },
+    {
+        "code": "8867",
+        "name": "Contrast phlebogram NEC"
+    },
+    {
+        "code": "4524",
+        "name": "Flexible sigmoidoscopy"
+    },
+    {
+        "code": "5412",
+        "name": "Reopen recent lap site"
+    },
+    {
+        "code": "4462",
+        "name": "Gastrostomy closure"
+    },
+    {
+        "code": "4543",
+        "name": "Endosc destru lg int les"
+    },
+    {
+        "code": "5523",
+        "name": "Closed renal biopsy"
+    },
+    {
+        "code": "3321",
+        "name": "Bronchoscopy thru stoma"
+    },
+    {
+        "code": "8949",
+        "name": "AICD check"
+    },
+    {
+        "code": "5212",
+        "name": "Open pancreatic biopsy"
+    },
+    {
+        "code": "4024",
+        "name": "Excise inguinal node"
+    },
+    {
+        "code": "9928",
+        "name": "Immunotherapy as antineo"
+    },
+    {
+        "code": "4632",
+        "name": "Percu endosc jejunostomy"
+    },
+    {
+        "code": "5300",
+        "name": "Unilat ing hern rep NOS"
+    },
+    {
+        "code": "8672",
+        "name": "Pedicle graft advancemen"
+    },
+    {
+        "code": "7789",
+        "name": "Partial ostectomy NEC"
+    },
+    {
+        "code": "9465",
+        "name": "Drug detoxification"
+    },
+    {
+        "code": "3533",
+        "name": "Annuloplasty"
+    },
+    {
+        "code": "3604",
+        "name": "Intrcoronry thromb infus"
+    },
+    {
+        "code": "9656",
+        "name": "Bronch/trach lavage NEC"
+    },
+    {
+        "code": "3892",
+        "name": "Umbilical vein cath"
+    },
+    {
+        "code": "8751",
+        "name": "Perc hepat Cholangiogram"
+    },
+    {
+        "code": "110",
+        "name": "Magnet removal cornea FB"
+    },
+    {
+        "code": "570",
+        "name": "Tu bladder clearance"
+    },
+    {
+        "code": "5749",
+        "name": "Tu destruc bladd les NEC"
+    },
+    {
+        "code": "9649",
+        "name": "Other gu instillation"
+    },
+    {
+        "code": "5474",
+        "name": "Omental repair NEC"
+    },
+    {
+        "code": "3794",
+        "name": "Implt/repl carddefib tot"
+    },
+    {
+        "code": "8669",
+        "name": "Free skin graft NEC"
+    },
+    {
+        "code": "221",
+        "name": "Insert/replace EVD"
+    },
+    {
+        "code": "5179",
+        "name": "Bile duct repair NEC"
+    },
+    {
+        "code": "504",
+        "name": "Total hepatectomy"
+    },
+    {
+        "code": "5091",
+        "name": "Percutan liver aspirat"
+    },
+    {
+        "code": "4029",
+        "name": "Simp exc lymph struc NEC"
+    },
+    {
+        "code": "3931",
+        "name": "Suture of artery"
+    },
+    {
+        "code": "3422",
+        "name": "Mediastinoscopy"
+    },
+    {
+        "code": "5101",
+        "name": "Percutan aspiration gb"
+    },
+    {
+        "code": "9723",
+        "name": "Replace trach tube"
+    },
+    {
+        "code": "113",
+        "name": "Closed brain biopsy"
+    },
+    {
+        "code": "1755",
+        "name": "Translum cor atherectomy"
+    },
+    {
+        "code": "3799",
+        "name": "Other heart/pericard ops"
+    },
+    {
+        "code": "4399",
+        "name": "Total gastrectomy NEC"
+    },
+    {
+        "code": "445",
+        "name": "Revision gastric anastom"
+    },
+    {
+        "code": "3775",
+        "name": "Revision of lead"
+    },
+    {
+        "code": "53",
+        "name": "Imp/rep CRT pacemakr gen"
+    },
+    {
+        "code": "9359",
+        "name": "Immobiliz/wound attn NEC"
+    },
+    {
+        "code": "5419",
+        "name": "Laparotomy NEC"
+    },
+    {
+        "code": "5103",
+        "name": "Cholecystostomy NEC"
+    },
+    {
+        "code": "5462",
+        "name": "Delayed clos abd wound"
+    },
+    {
+        "code": "3424",
+        "name": "Pleural biopsy NEC"
+    },
+    {
+        "code": "5569",
+        "name": "Kidney transplant NEC"
+    },
+    {
+        "code": "3806",
+        "name": "Abdomen artery incision"
+    },
+    {
+        "code": "5524",
+        "name": "Open renal biopsy"
+    },
+    {
+        "code": "92",
+        "name": "Trnsplnt live nonrel don"
+    },
+    {
+        "code": "43",
+        "name": "Peripheral nerve suture"
+    },
+    {
+        "code": "3951",
+        "name": "Clipping of aneurysm"
+    },
+    {
+        "code": "8309",
+        "name": "Soft tissue incision NEC"
+    },
+    {
+        "code": "326",
+        "name": "Rad dissec thorac struct"
+    },
+    {
+        "code": "5411",
+        "name": "Exploratory laparotomy"
+    },
+    {
+        "code": "3421",
+        "name": "Transpleura thoracoscopy"
+    },
+    {
+        "code": "346",
+        "name": "Scarification of pleura"
+    },
+    {
+        "code": "4413",
+        "name": "Gastroscopy NEC"
+    },
+    {
+        "code": "239",
+        "name": "Vent shunt extracran NEC"
+    },
+    {
+        "code": "3174",
+        "name": "Revision of tracheostomy"
+    },
+    {
+        "code": "9356",
+        "name": "Pressure dressing applic"
+    },
+    {
+        "code": "8415",
+        "name": "Below knee amputat NEC"
+    },
+    {
+        "code": "640",
+        "name": "Circumcision"
+    },
+    {
+        "code": "5651",
+        "name": "Form cutan ileoureterost"
+    },
+    {
+        "code": "5771",
+        "name": "Radical cystectomy"
+    },
+    {
+        "code": "8051",
+        "name": "Excision intervert disc"
+    },
+    {
+        "code": "3201",
+        "name": "Endosc destruc bronc les"
+    },
+    {
+        "code": "3964",
+        "name": "Intraop cardiac pacemak"
+    },
+    {
+        "code": "5822",
+        "name": "Urethroscopy NEC"
+    },
+    {
+        "code": "8151",
+        "name": "Total hip replacement"
+    },
+    {
+        "code": "8609",
+        "name": "Skin & subq incision NEC"
+    },
+    {
+        "code": "529",
+        "name": "Other sympathectomy"
+    },
+    {
+        "code": "4142",
+        "name": "Exc splenic lesion/tiss"
+    },
+    {
+        "code": "8331",
+        "name": "Excis les tendon sheath"
+    },
+    {
+        "code": "3886",
+        "name": "Occlude abd artery NEC"
+    },
+    {
+        "code": "540",
+        "name": "Abdominal wall incision"
+    },
+    {
+        "code": "721",
+        "name": "Low forceps w episiotomy"
+    },
+    {
+        "code": "5732",
+        "name": "Cystoscopy NEC"
+    },
+    {
+        "code": "7674",
+        "name": "Open reduct maxillary fx"
+    },
+    {
+        "code": "2109",
+        "name": "Epistaxis control NEC"
+    },
+    {
+        "code": "3493",
+        "name": "Repair of pleura"
+    },
+    {
+        "code": "7171",
+        "name": "Suture vulvar laceration"
+    },
+    {
+        "code": "4652",
+        "name": "Lg bowel stoma closure"
+    },
+    {
+        "code": "4594",
+        "name": "Lg-to-lg bowel anastom"
+    },
+    {
+        "code": "3732",
+        "name": "Heart aneurysm excision"
+    },
+    {
+        "code": "4041",
+        "name": "Unilat rad neck dissect"
+    },
+    {
+        "code": "3749",
+        "name": "Heart/pericard repr NEC"
+    },
+    {
+        "code": "4541",
+        "name": "Excise lg intestine les"
+    },
+    {
+        "code": "3339",
+        "name": "Surg collaps of lung NEC"
+    },
+    {
+        "code": "139",
+        "name": "Other brain incision"
+    },
+    {
+        "code": "632",
+        "name": "Excise epididymis cyst"
+    },
+    {
+        "code": "8395",
+        "name": "Soft tissue aspirat NEC"
+    },
+    {
+        "code": "8011",
+        "name": "Oth arthrotomy-shoulder"
+    },
+    {
+        "code": "8673",
+        "name": "Attach pedicle to hand"
+    },
+    {
+        "code": "8229",
+        "name": "Exc les sft tiss hnd NEC"
+    },
+    {
+        "code": "315",
+        "name": "Local destruc trach les"
+    },
+    {
+        "code": "9737",
+        "name": "Remove tracheostomy tube"
+    },
+    {
+        "code": "3199",
+        "name": "Other tracheal operation"
+    },
+    {
+        "code": "4023",
+        "name": "Excise axillary node"
+    },
+    {
+        "code": "864",
+        "name": "Radical excis skin les"
+    },
+    {
+        "code": "51",
+        "name": "Impl CRT defibrillat sys"
+    },
+    {
+        "code": "4823",
+        "name": "Rigid proctosigmoidoscpy"
+    },
+    {
+        "code": "4432",
+        "name": "Percu gastrojejunostomy"
+    },
+    {
+        "code": "8104",
+        "name": "Drsl/drslumb fus ant/ant"
+    },
+    {
+        "code": "3925",
+        "name": "Aorta-iliac-femor bypass"
+    },
+    {
+        "code": "3846",
+        "name": "Abd artery resec w repla"
+    },
+    {
+        "code": "2171",
+        "name": "Clos reduction nasal fx"
+    },
+    {
+        "code": "2279",
+        "name": "Nasal sinus repair NEC"
+    },
+    {
+        "code": "3175",
+        "name": "Tracheal reconstruction"
+    },
+    {
+        "code": "3228",
+        "name": "Endosc destruc lung les"
+    },
+    {
+        "code": "3391",
+        "name": "Bronchial dilation"
+    },
+    {
+        "code": "3514",
+        "name": "Opn tricus valvuloplasty"
+    },
+    {
+        "code": "3782",
+        "name": "Int insert 1-cham, rate"
+    },
+    {
+        "code": "3771",
+        "name": "Int insert lead in vent"
+    },
+    {
+        "code": "9204",
+        "name": "GI scan & isotope funct"
+    },
+    {
+        "code": "8891",
+        "name": "Mri of brain & brainstem"
+    },
+    {
+        "code": "24",
+        "name": "IVUS coronary vessels"
+    },
+    {
+        "code": "9703",
+        "name": "Replace small bowel tube"
+    },
+    {
+        "code": "4242",
+        "name": "Total esophagectomy"
+    },
+    {
+        "code": "8339",
+        "name": "Exc les soft tissue NEC"
+    },
+    {
+        "code": "8412",
+        "name": "Amputation through foot"
+    },
+    {
+        "code": "4620",
+        "name": "Ileostomy NOS"
+    },
+    {
+        "code": "4673",
+        "name": "Small bowel suture NEC"
+    },
+    {
+        "code": "118",
+        "name": "Other brain dx procedure"
+    },
+    {
+        "code": "7974",
+        "name": "Cl reduc disloc-hand/fng"
+    },
+    {
+        "code": "9344",
+        "name": "Other skeletal traction"
+    },
+    {
+        "code": "8874",
+        "name": "Dx ultrasound-digestive"
+    },
+    {
+        "code": "9909",
+        "name": "Transfusion NEC"
+    },
+    {
+        "code": "3179",
+        "name": "Other tracheal repair"
+    },
+    {
+        "code": "3348",
+        "name": "Bronchial repair NEC"
+    },
+    {
+        "code": "9815",
+        "name": "Remov intralum trach FB"
+    },
+    {
+        "code": "415",
+        "name": "Total splenectomy"
+    },
+    {
+        "code": "9609",
+        "name": "Insert rectal tube"
+    },
+    {
+        "code": "8272",
+        "name": "Plast op hnd-mus/fas grf"
+    },
+    {
+        "code": "7764",
+        "name": "Loc exc les metacar/car"
+    },
+    {
+        "code": "8256",
+        "name": "Transplant hand tend NEC"
+    },
+    {
+        "code": "7777",
+        "name": "Excise tib/fib for graft"
+    },
+    {
+        "code": "8675",
+        "name": "Revision of pedicle grft"
+    },
+    {
+        "code": "8171",
+        "name": "Arthroplas metacarp wit"
+    },
+    {
+        "code": "3943",
+        "name": "Remov ren dialysis shunt"
+    },
+    {
+        "code": "9803",
+        "name": "Remov intralum gastr FB"
+    },
+    {
+        "code": "4680",
+        "name": "Intra-ab bowel manip NOS"
+    },
+    {
+        "code": "9971",
+        "name": "Therapeu plasmapheresis"
+    },
+    {
+        "code": "5498",
+        "name": "Peritoneal dialysis"
+    },
+    {
+        "code": "9917",
+        "name": "Inject insulin"
+    },
+    {
+        "code": "3894",
+        "name": "Venous cutdown"
+    },
+    {
+        "code": "9396",
+        "name": "Oxygen enrichment NEC"
+    },
+    {
+        "code": "3736",
+        "name": "Exc,destrct,exclus LAA"
+    },
+    {
+        "code": "4292",
+        "name": "Esophageal dilation"
+    },
+    {
+        "code": "5464",
+        "name": "Peritoneal suture"
+    },
+    {
+        "code": "8762",
+        "name": "Upper GI series"
+    },
+    {
+        "code": "8763",
+        "name": "Small bowel series"
+    },
+    {
+        "code": "7711",
+        "name": "Other chest cage incis"
+    },
+    {
+        "code": "3965",
+        "name": "Extracorporeal memb oxy"
+    },
+    {
+        "code": "4514",
+        "name": "Clos small bowel biopsy"
+    },
+    {
+        "code": "4429",
+        "name": "Other pyloroplasty"
+    },
+    {
+        "code": "5252",
+        "name": "Distal pancreatectomy"
+    },
+    {
+        "code": "7969",
+        "name": "Open fx site debride NEC"
+    },
+    {
+        "code": "5909",
+        "name": "Periren/ureter incis NEC"
+    },
+    {
+        "code": "4281",
+        "name": "Insert perm tube esophag"
+    },
+    {
+        "code": "5424",
+        "name": "Closed intra-abd mass bx"
+    },
+    {
+        "code": "4719",
+        "name": "Other incid appendectomy"
+    },
+    {
+        "code": "5461",
+        "name": "Reclose post op disrupt"
+    },
+    {
+        "code": "4642",
+        "name": "Pericolost hernia repair"
+    },
+    {
+        "code": "4651",
+        "name": "Sm bowel stoma closure"
+    },
+    {
+        "code": "4862",
+        "name": "Ant rect resect w colost"
+    },
+    {
+        "code": "4674",
+        "name": "Close sm bowel fist NEC"
+    },
+    {
+        "code": "390",
+        "name": "Systemic-pulm art shunt"
+    },
+    {
+        "code": "9729",
+        "name": "Non-op replacement NEC"
+    },
+    {
+        "code": "8774",
+        "name": "Retrograde pyelogram"
+    },
+    {
+        "code": "4576",
+        "name": "Open sigmoidectomy NEC"
+    },
+    {
+        "code": "3326",
+        "name": "Closed lung biopsy"
+    },
+    {
+        "code": "8814",
+        "name": "Retroperiton fistulogram"
+    },
+    {
+        "code": "9357",
+        "name": "Dressing of wound NEC"
+    },
+    {
+        "code": "4592",
+        "name": "Sm bowel-rect stump anas"
+    },
+    {
+        "code": "4824",
+        "name": "Closed rectal biopsy"
+    },
+    {
+        "code": "353",
+        "name": "Vertebral fx repair"
+    },
+    {
+        "code": "359",
+        "name": "Spinal struct repair NEC"
+    },
+    {
+        "code": "8162",
+        "name": "Fus/refus 2-3 vertebrae"
+    },
+    {
+        "code": "8919",
+        "name": "Video/radio eeg monitor"
+    },
+    {
+        "code": "392",
+        "name": "Spinal canal inject NEC"
+    },
+    {
+        "code": "3956",
+        "name": "Repair vess w tis patch"
+    },
+    {
+        "code": "481",
+        "name": "Proctostomy"
+    },
+    {
+        "code": "704",
+        "name": "Vaginal obliteration"
+    },
+    {
+        "code": "688",
+        "name": "Pelvic evisceration"
+    },
+    {
+        "code": "715",
+        "name": "Radical vulvectomy"
+    },
+    {
+        "code": "4591",
+        "name": "Sm-to-sm bowel anastom"
+    },
+    {
+        "code": "527",
+        "name": "Rad pancreaticoduodenect"
+    },
+    {
+        "code": "5163",
+        "name": "Common duct excis NEC"
+    },
+    {
+        "code": "503",
+        "name": "Hepatic lobectomy"
+    },
+    {
+        "code": "3129",
+        "name": "Other perm tracheostomy"
+    },
+    {
+        "code": "2319",
+        "name": "Surg tooth extract NEC"
+    },
+    {
+        "code": "5493",
+        "name": "Create cutanperiton fist"
+    },
+    {
+        "code": "3619",
+        "name": "Hrt revas byps anas NEC"
+    },
+    {
+        "code": "202",
+        "name": "Elevate skull fx fragmnt"
+    },
+    {
+        "code": "9636",
+        "name": "GI ostomy irrigation"
+    },
+    {
+        "code": "3885",
+        "name": "Occlude thoracic ves NEC"
+    },
+    {
+        "code": "3616",
+        "name": "2 int mam-cor art bypass"
+    },
+    {
+        "code": "8108",
+        "name": "Lumb/lmbsac fus ant/post"
+    },
+    {
+        "code": "8873",
+        "name": "Dx ultrasound-thorax NEC"
+    },
+    {
+        "code": "4709",
+        "name": "Other appendectomy"
+    },
+    {
+        "code": "5495",
+        "name": "Peritoneal incision"
+    },
+    {
+        "code": "437",
+        "name": "Part gastrec w jej anast"
+    },
+    {
+        "code": "9468",
+        "name": "Comb alcohol/drug detox"
+    },
+    {
+        "code": "5136",
+        "name": "Choledochoenterostomy"
+    },
+    {
+        "code": "3483",
+        "name": "Close diaphragm fistula"
+    },
+    {
+        "code": "4534",
+        "name": "Destr sm bowel les NEC"
+    },
+    {
+        "code": "543",
+        "name": "Destruct abd wall lesion"
+    },
+    {
+        "code": "9633",
+        "name": "Gastric lavage"
+    },
+    {
+        "code": "7771",
+        "name": "Ex chest cage bone-gft"
+    },
+    {
+        "code": "7788",
+        "name": "Part ostect-metatar/tar"
+    },
+    {
+        "code": "7779",
+        "name": "Excise bone for gft NEC"
+    },
+    {
+        "code": "7739",
+        "name": "Bone division NEC"
+    },
+    {
+        "code": "8164",
+        "name": "Fus/refus 9 vertebrae"
+    },
+    {
+        "code": "8135",
+        "name": "Refus drs/drslmb pst/pst"
+    },
+    {
+        "code": "8623",
+        "name": "Nail removal"
+    },
+    {
+        "code": "843",
+        "name": "Amputation stump revis"
+    },
+    {
+        "code": "9659",
+        "name": "Wound irrigation NEC"
+    },
+    {
+        "code": "714",
+        "name": "Operations on clitoris"
+    },
+    {
+        "code": "9979",
+        "name": "Other therapeu apheresis"
+    },
+    {
+        "code": "9903",
+        "name": "Whole blood transfus NEC"
+    },
+    {
+        "code": "9449",
+        "name": "Other counselling"
+    },
+    {
+        "code": "8365",
+        "name": "Other muscle/fasc suture"
+    },
+    {
+        "code": "8683",
+        "name": "Size reduct plastic op"
+    },
+    {
+        "code": "4676",
+        "name": "Close lg bowel fistula"
+    },
+    {
+        "code": "4693",
+        "name": "Revise sm bowel anastom"
+    },
+    {
+        "code": "609",
+        "name": "Incis thyroid field NEC"
+    },
+    {
+        "code": "639",
+        "name": "Part thyroidectomy NEC"
+    },
+    {
+        "code": "8132",
+        "name": "Refus oth cervcl ant/ant"
+    },
+    {
+        "code": "294",
+        "name": "Plastic op on pharynx"
+    },
+    {
+        "code": "9341",
+        "name": "Spine tract w skull dev"
+    },
+    {
+        "code": "8134",
+        "name": "Refus drs/drslmb ant/ant"
+    },
+    {
+        "code": "3789",
+        "name": "Revise or remove pacemak"
+    },
+    {
+        "code": "3779",
+        "name": "Rev/reloc card dev pockt"
+    },
+    {
+        "code": "3777",
+        "name": "Removal of lead w/o repl"
+    },
+    {
+        "code": "212",
+        "name": "Brain meninge repair NEC"
+    },
+    {
+        "code": "9741",
+        "name": "Remov thoracotomy tube"
+    },
+    {
+        "code": "8192",
+        "name": "Injection into joint"
+    },
+    {
+        "code": "7902",
+        "name": "Cl fx reduc-radius/ulna"
+    },
+    {
+        "code": "7967",
+        "name": "Debrid opn fx-metat/tar"
+    },
+    {
+        "code": "7818",
+        "name": "Appl ext fix-metatar/tar"
+    },
+    {
+        "code": "4701",
+        "name": "Lap appendectomy"
+    },
+    {
+        "code": "3427",
+        "name": "Biopsy of diaphragm"
+    },
+    {
+        "code": "3973",
+        "name": "Endo imp grft thor aorta"
+    },
+    {
+        "code": "3884",
+        "name": "Occlude aorta NEC"
+    },
+    {
+        "code": "3803",
+        "name": "Upper limb vessel incis"
+    },
+    {
+        "code": "9923",
+        "name": "Inject steroid"
+    },
+    {
+        "code": "9981",
+        "name": "Hypothermia"
+    },
+    {
+        "code": "114",
+        "name": "Open brain biopsy"
+    },
+    {
+        "code": "5451",
+        "name": "Lap periton adhesiolysis"
+    },
+    {
+        "code": "3144",
+        "name": "Closed biopsy trachea"
+    },
+    {
+        "code": "651",
+        "name": "Part substern thyroidect"
+    },
+    {
+        "code": "3141",
+        "name": "Tracheoscopy thru stoma"
+    },
+    {
+        "code": "3148",
+        "name": "Oth larynx dx procedure"
+    },
+    {
+        "code": "3029",
+        "name": "Other part laryngectomy"
+    },
+    {
+        "code": "8154",
+        "name": "Total knee replacement"
+    },
+    {
+        "code": "2181",
+        "name": "Nasal laceration suture"
+    },
+    {
+        "code": "7932",
+        "name": "Op red-int fix rad/ulna"
+    },
+    {
+        "code": "7692",
+        "name": "Syn implant to face bone"
+    },
+    {
+        "code": "7672",
+        "name": "Opn reduct malar/zygo fx"
+    },
+    {
+        "code": "7679",
+        "name": "Open reduct face fx NEC"
+    },
+    {
+        "code": "881",
+        "name": "Linear rep lid lacer"
+    },
+    {
+        "code": "7697",
+        "name": "Remove int fix face bone"
+    },
+    {
+        "code": "303",
+        "name": "Complete laryngectomy"
+    },
+    {
+        "code": "243",
+        "name": "Remove ventricle shunt"
+    },
+    {
+        "code": "5213",
+        "name": "Endosc retro pancreatog"
+    },
+    {
+        "code": "5164",
+        "name": "Endosc destru bile les"
+    },
+    {
+        "code": "526",
+        "name": "Total pancreatectomy"
+    },
+    {
+        "code": "5280",
+        "name": "Pancreat transplant NOS"
+    },
+    {
+        "code": "4681",
+        "name": "Intra-abd sm bowel manip"
+    },
+    {
+        "code": "280",
+        "name": "Peritonsillar i & d"
+    },
+    {
+        "code": "4105",
+        "name": "Allo hem stem ct w/o pur"
+    },
+    {
+        "code": "9702",
+        "name": "Replace gastrostomy tube"
+    },
+    {
+        "code": "4995",
+        "name": "Control anal hemorrhage"
+    },
+    {
+        "code": "9802",
+        "name": "Remov intralum esoph FB"
+    },
+    {
+        "code": "3399",
+        "name": "Lung operation NEC"
+    },
+    {
+        "code": "560",
+        "name": "Tu remov ureter obstruct"
+    },
+    {
+        "code": "8851",
+        "name": "Vena cav angiocardiogram"
+    },
+    {
+        "code": "5123",
+        "name": "Laparoscopic cholecystec"
+    },
+    {
+        "code": "5114",
+        "name": "Clo endosc bx bile duct"
+    },
+    {
+        "code": "4623",
+        "name": "Permanent ileostomy NEC"
+    },
+    {
+        "code": "8803",
+        "name": "Abdominal wall sinogram"
+    },
+    {
+        "code": "4241",
+        "name": "Partial esophagectomy"
+    },
+    {
+        "code": "4389",
+        "name": "Opn/oth part gastrectomy"
+    },
+    {
+        "code": "94",
+        "name": "Intra-op neurophys montr"
+    },
+    {
+        "code": "8106",
+        "name": "Lumb/lmbosac fus ant/ant"
+    },
+    {
+        "code": "8099",
+        "name": "Excision of joint NEC"
+    },
+    {
+        "code": "8451",
+        "name": "Ins spinal fusion device"
+    },
+    {
+        "code": "48",
+        "name": "Insert 4+ vasculr stents"
+    },
+    {
+        "code": "4671",
+        "name": "Duodenal lacerat suture"
+    },
+    {
+        "code": "7939",
+        "name": "Opn fx red w int fix NEC"
+    },
+    {
+        "code": "8102",
+        "name": "Oth cerv fusion ant/ant"
+    },
+    {
+        "code": "4694",
+        "name": "Revise lg bowel anastom"
+    },
+    {
+        "code": "3699",
+        "name": "Heart vessel op NEC"
+    },
+    {
+        "code": "7719",
+        "name": "Bone incis w/o div NEC"
+    },
+    {
+        "code": "7869",
+        "name": "Remove impl device NEC"
+    },
+    {
+        "code": "7867",
+        "name": "Remov imp dev-tib/fibula"
+    },
+    {
+        "code": "8087",
+        "name": "Destruc-ankle lesion NEC"
+    },
+    {
+        "code": "7769",
+        "name": "Loc exc bone lesion NEC"
+    },
+    {
+        "code": "7767",
+        "name": "Loc exc les tibia/fibula"
+    },
+    {
+        "code": "2264",
+        "name": "Sphenoidectomy"
+    },
+    {
+        "code": "8863",
+        "name": "Thorac contr phlebog NEC"
+    },
+    {
+        "code": "3923",
+        "name": "Intrathoracic shunt NEC"
+    },
+    {
+        "code": "4287",
+        "name": "Esophageal graft NEC"
+    },
+    {
+        "code": "5380",
+        "name": "Thor rep-diaph hern NOS"
+    },
+    {
+        "code": "3924",
+        "name": "Aorta-renal bypass"
+    },
+    {
+        "code": "4282",
+        "name": "Suture esophageal lacer"
+    },
+    {
+        "code": "4461",
+        "name": "Suture gastric lacerat"
+    },
+    {
+        "code": "3499",
+        "name": "Thoracic operation NEC"
+    },
+    {
+        "code": "4466",
+        "name": "Creat esophagastr sphinc"
+    },
+    {
+        "code": "4595",
+        "name": "Anal anastomosis"
+    },
+    {
+        "code": "4601",
+        "name": "Sm bowel exteriorization"
+    },
+    {
+        "code": "4679",
+        "name": "Repair of intestine NEC"
+    },
+    {
+        "code": "5359",
+        "name": "Abd wall hern repair NEC"
+    },
+    {
+        "code": "3143",
+        "name": "Closed biopsy larynx"
+    },
+    {
+        "code": "3193",
+        "name": "Replace trac/laryn stent"
+    },
+    {
+        "code": "5022",
+        "name": "Partial hepatectomy"
+    },
+    {
+        "code": "61",
+        "name": "Perc angio extracran ves"
+    },
+    {
+        "code": "63",
+        "name": "Perc ins carotid stent"
+    },
+    {
+        "code": "10",
+        "name": "Implant chemothera agent"
+    },
+    {
+        "code": "3401",
+        "name": "Incision of chest wall"
+    },
+    {
+        "code": "7791",
+        "name": "Tot chest cage ostectomy"
+    },
+    {
+        "code": "3596",
+        "name": "Perc balloon valvuplasty"
+    },
+    {
+        "code": "7848",
+        "name": "Oth meta/tar repa/plast"
+    },
+    {
+        "code": "8311",
+        "name": "Achillotenotomy"
+    },
+    {
+        "code": "7915",
+        "name": "Closed red-int fix femur"
+    },
+    {
+        "code": "8844",
+        "name": "Contr thor arteriogr NEC"
+    },
+    {
+        "code": "5792",
+        "name": "Bladder neck dilation"
+    },
+    {
+        "code": "524",
+        "name": "Int drain pancreat cyst"
+    },
+    {
+        "code": "4643",
+        "name": "Lg bowel stoma revis NEC"
+    },
+    {
+        "code": "8879",
+        "name": "Dx ultrasound NEC"
+    },
+    {
+        "code": "3327",
+        "name": "Clos endoscopic lung bx"
+    },
+    {
+        "code": "8016",
+        "name": "Oth arthrotomy-knee"
+    },
+    {
+        "code": "3725",
+        "name": "Cardiac biopsy"
+    },
+    {
+        "code": "3728",
+        "name": "Intracardiac echocardio"
+    },
+    {
+        "code": "9919",
+        "name": "Inject anticoagulant"
+    },
+    {
+        "code": "153",
+        "name": "Brain lobectomy"
+    },
+    {
+        "code": "125",
+        "name": "Other craniectomy"
+    },
+    {
+        "code": "8039",
+        "name": "Joint biopsy NEC"
+    },
+    {
+        "code": "5421",
+        "name": "Laparoscopy"
+    },
+    {
+        "code": "8401",
+        "name": "Finger amputation"
+    },
+    {
+        "code": "3952",
+        "name": "Aneurysm repair NEC"
+    },
+    {
+        "code": "5222",
+        "name": "Other destru pancrea les"
+    },
+    {
+        "code": "4064",
+        "name": "Ligate thoracic duct"
+    },
+    {
+        "code": "8417",
+        "name": "Above knee amputation"
+    },
+    {
+        "code": "9978",
+        "name": "Aquapheresis"
+    },
+    {
+        "code": "4610",
+        "name": "Colostomy NOS"
+    },
+    {
+        "code": "3868",
+        "name": "Leg artery excision"
+    },
+    {
+        "code": "7749",
+        "name": "Bone biopsy NEC"
+    },
+    {
+        "code": "6449",
+        "name": "Penile repair NEC"
+    },
+    {
+        "code": "642",
+        "name": "Local excis penile les"
+    },
+    {
+        "code": "4613",
+        "name": "Permanent colostomy"
+    },
+    {
+        "code": "5641",
+        "name": "Partial ureterectomy"
+    },
+    {
+        "code": "3426",
+        "name": "Open mediastinal biopsy"
+    },
+    {
+        "code": "3229",
+        "name": "Destroy loc lung les NEC"
+    },
+    {
+        "code": "4881",
+        "name": "Perirectal incision"
+    },
+    {
+        "code": "7866",
+        "name": "Remov imp device-patella"
+    },
+    {
+        "code": "8321",
+        "name": "Open biopsy soft tissue"
+    },
+    {
+        "code": "7747",
+        "name": "Tibia & fibula biopsy"
+    },
+    {
+        "code": "55",
+        "name": "Ins d-e stent oth periph"
+    },
+    {
+        "code": "5051",
+        "name": "Auxiliary liver transpl"
+    },
+    {
+        "code": "109",
+        "name": "Cranial puncture NEC"
+    },
+    {
+        "code": "5304",
+        "name": "Opn ind ing hern-gft NEC"
+    },
+    {
+        "code": "8603",
+        "name": "Incision pilonidal sinus"
+    },
+    {
+        "code": "7760",
+        "name": "Loc exc bone lesion NOS"
+    },
+    {
+        "code": "206",
+        "name": "Cranial osteoplasty NEC"
+    },
+    {
+        "code": "3551",
+        "name": "Pros rep atrial def-opn"
+    },
+    {
+        "code": "344",
+        "name": "Destruct chest wall les"
+    },
+    {
+        "code": "3809",
+        "name": "Lower limb vein incision"
+    },
+    {
+        "code": "8332",
+        "name": "Excis lesion of muscle"
+    },
+    {
+        "code": "8596",
+        "name": "Remov breast tissu expan"
+    },
+    {
+        "code": "8521",
+        "name": "Local excis breast les"
+    },
+    {
+        "code": "8595",
+        "name": "Inser breast tissu expan"
+    },
+    {
+        "code": "681",
+        "name": "Total parathyroidectomy"
+    },
+    {
+        "code": "5553",
+        "name": "Rejected kidney nephrect"
+    },
+    {
+        "code": "9425",
+        "name": "Psychiat drug therap NEC"
+    },
+    {
+        "code": "2162",
+        "name": "Turbinate fracture"
+    },
+    {
+        "code": "2103",
+        "name": "Cautery to stop epistax"
+    },
+    {
+        "code": "2188",
+        "name": "Septoplasty NEC"
+    },
+    {
+        "code": "9547",
+        "name": "Hearing examination NOS"
+    },
+    {
+        "code": "9851",
+        "name": "Eswl kid/ureter/bladder"
+    },
+    {
+        "code": "9969",
+        "name": "Cardiac rhythm conv NEC"
+    },
+    {
+        "code": "4444",
+        "name": "Transcath embo gast hem"
+    },
+    {
+        "code": "5682",
+        "name": "Suture ureteral lacerat"
+    },
+    {
+        "code": "3816",
+        "name": "Abdominal endarterectomy"
+    },
+    {
+        "code": "8601",
+        "name": "Aspiration skin & subq"
+    },
+    {
+        "code": "6951",
+        "name": "Aspirat curet-preg termi"
+    },
+    {
+        "code": "4869",
+        "name": "Rectal resection NEC"
+    },
+    {
+        "code": "3329",
+        "name": "Bronch/lung dx proc NEC"
+    },
+    {
+        "code": "4603",
+        "name": "Lg bowel exteriorization"
+    },
+    {
+        "code": "71",
+        "name": "Rev hip repl-acetab comp"
+    },
+    {
+        "code": "3452",
+        "name": "Thoracoscopc decort lung"
+    },
+    {
+        "code": "7914",
+        "name": "Close red-int fix finger"
+    },
+    {
+        "code": "7962",
+        "name": "Debrid opn fx-radius/uln"
+    },
+    {
+        "code": "39",
+        "name": "Other CAS"
+    },
+    {
+        "code": "3966",
+        "name": "Per cardiopulmon bypass"
+    },
+    {
+        "code": "8594",
+        "name": "Breast implant removal"
+    },
+    {
+        "code": "7799",
+        "name": "Total ostectomy NEC"
+    },
+    {
+        "code": "3807",
+        "name": "Abdominal vein incision"
+    },
+    {
+        "code": "3821",
+        "name": "Blood vessel biopsy"
+    },
+    {
+        "code": "4572",
+        "name": "Open cecectomy NEC"
+    },
+    {
+        "code": "233",
+        "name": "Tooth restorat by inlay"
+    },
+    {
+        "code": "28",
+        "name": "Intravascul imaging NEC"
+    },
+    {
+        "code": "8152",
+        "name": "Partial hip replacement"
+    },
+    {
+        "code": "3834",
+        "name": "Aorta resection & anast"
+    },
+    {
+        "code": "3963",
+        "name": "Cardioplegia"
+    },
+    {
+        "code": "5305",
+        "name": "Ing hernia rep-graft NOS"
+    },
+    {
+        "code": "625",
+        "name": "Orchiopexy"
+    },
+    {
+        "code": "5310",
+        "name": "Bilat ing hernia rep NOS"
+    },
+    {
+        "code": "101",
+        "name": "Conjunctiva incision NEC"
+    },
+    {
+        "code": "8721",
+        "name": "Contrast myelogram"
+    },
+    {
+        "code": "3328",
+        "name": "Open lung biopsy"
+    },
+    {
+        "code": "3797",
+        "name": "Repl cardiodefib leads"
+    },
+    {
+        "code": "54",
+        "name": "Imp/rep CRT defib genat"
+    },
+    {
+        "code": "8959",
+        "name": "Nonop cardiac/vasc exam"
+    },
+    {
+        "code": "52",
+        "name": "Imp/rep lead lf ven sys"
+    },
+    {
+        "code": "8769",
+        "name": "Digestive tract xray NEC"
+    },
+    {
+        "code": "9814",
+        "name": "Remov intralum laryn FB"
+    },
+    {
+        "code": "2912",
+        "name": "Pharyngeal biopsy"
+    },
+    {
+        "code": "4836",
+        "name": "Polypectomy of rectum"
+    },
+    {
+        "code": "4903",
+        "name": "Excis perianal skin tag"
+    },
+    {
+        "code": "4993",
+        "name": "Anal incision NEC"
+    },
+    {
+        "code": "9224",
+        "name": "Teleradio using photons"
+    },
+    {
+        "code": "3814",
+        "name": "Endarterectomy of aorta"
+    },
+    {
+        "code": "3955",
+        "name": "Reimplan aberr renal ves"
+    },
+    {
+        "code": "4341",
+        "name": "Endosc destr stomach les"
+    },
+    {
+        "code": "9354",
+        "name": "Application of splint"
+    },
+    {
+        "code": "5492",
+        "name": "Remove FB from periton"
+    },
+    {
+        "code": "8076",
+        "name": "Knee synovectomy"
+    },
+    {
+        "code": "9995",
+        "name": "Stretching of foreskin"
+    },
+    {
+        "code": "8801",
+        "name": "C.A.T. scan of abdomen"
+    },
+    {
+        "code": "4563",
+        "name": "Total removal sm bowel"
+    },
+    {
+        "code": "5717",
+        "name": "Percutaneous cystostomy"
+    },
+    {
+        "code": "3459",
+        "name": "Other pleural excision"
+    },
+    {
+        "code": "8005",
+        "name": "Arth/pros rem wo rep-hip"
+    },
+    {
+        "code": "8772",
+        "name": "Nephrotomogram NEC"
+    },
+    {
+        "code": "8865",
+        "name": "Abd contr phlebogram NEC"
+    },
+    {
+        "code": "562",
+        "name": "Ureterotomy"
+    },
+    {
+        "code": "3805",
+        "name": "Thoracic vessel inc NEC"
+    },
+    {
+        "code": "5502",
+        "name": "Nephrostomy"
+    },
+    {
+        "code": "4533",
+        "name": "Local excis sm bowel NEC"
+    },
+    {
+        "code": "5282",
+        "name": "Pancreatic homotransplan"
+    },
+    {
+        "code": "4512",
+        "name": "Endosc sm bowel thru st"
+    },
+    {
+        "code": "3343",
+        "name": "Lung laceration closure"
+    },
+    {
+        "code": "7731",
+        "name": "Chest cage bone div NEC"
+    },
+    {
+        "code": "1434",
+        "name": "Retinal tear laser coag"
+    },
+    {
+        "code": "4211",
+        "name": "Cervical esophagostomy"
+    },
+    {
+        "code": "4255",
+        "name": "Thorac lg bowel interpos"
+    },
+    {
+        "code": "8314",
+        "name": "Fasciotomy"
+    },
+    {
+        "code": "3776",
+        "name": "Repl tv atri-vent lead"
+    },
+    {
+        "code": "3785",
+        "name": "Repl pacem w 1-cham, non"
+    },
+    {
+        "code": "9463",
+        "name": "Alcohol rehab/detox"
+    },
+    {
+        "code": "8969",
+        "name": "Coronary bld flow monit"
+    },
+    {
+        "code": "9427",
+        "name": "Electroshock therapy NEC"
+    },
+    {
+        "code": "3774",
+        "name": "Int or repl lead epicar"
+    },
+    {
+        "code": "5499",
+        "name": "Abdomen region ops NEC"
+    },
+    {
+        "code": "4582",
+        "name": "Op tot intr-abd colectmy"
+    },
+    {
+        "code": "2757",
+        "name": "Pedicle attach to mouth"
+    },
+    {
+        "code": "412",
+        "name": "Splenotomy"
+    },
+    {
+        "code": "2742",
+        "name": "Wide excision of lip les"
+    },
+    {
+        "code": "5423",
+        "name": "Peritoneal biopsy"
+    },
+    {
+        "code": "4571",
+        "name": "Opn mul seg lg intes NEC"
+    },
+    {
+        "code": "3822",
+        "name": "Percutaneous angioscopy"
+    },
+    {
+        "code": "3899",
+        "name": "Venous puncture NEC"
+    },
+    {
+        "code": "8541",
+        "name": "Unilat simple mastectomy"
+    },
+    {
+        "code": "2102",
+        "name": "Post nasal pac for epist"
+    },
+    {
+        "code": "6561",
+        "name": "Oth remove ovaries/tubes"
+    },
+    {
+        "code": "7023",
+        "name": "Cul-de-sac biopsy"
+    },
+    {
+        "code": "2751",
+        "name": "Suture of lip laceration"
+    },
+    {
+        "code": "5994",
+        "name": "Replace cystostomy tube"
+    },
+    {
+        "code": "6141",
+        "name": "Suture scrotal lacerat"
+    },
+    {
+        "code": "2309",
+        "name": "Tooth extraction NEC"
+    },
+    {
+        "code": "3511",
+        "name": "Opn aortic valvuloplasty"
+    },
+    {
+        "code": "3484",
+        "name": "Other diaphragm repair"
+    },
+    {
+        "code": "33",
+        "name": "CAS w fluoroscopy"
+    },
+    {
+        "code": "3866",
+        "name": "Abdominal artery excis"
+    },
+    {
+        "code": "8342",
+        "name": "Other tenonectomy"
+    },
+    {
+        "code": "8212",
+        "name": "Fasciotomy of hand"
+    },
+    {
+        "code": "6662",
+        "name": "Remov tube & ectop preg"
+    },
+    {
+        "code": "9638",
+        "name": "Impacted feces removal"
+    },
+    {
+        "code": "234",
+        "name": "Ventricl shunt-abdomen"
+    },
+    {
+        "code": "780",
+        "name": "Thymectomy NOS"
+    },
+    {
+        "code": "5341",
+        "name": "Opn rep umb hrn-grft NEC"
+    },
+    {
+        "code": "2201",
+        "name": "Sinus punct for lavage"
+    },
+    {
+        "code": "2219",
+        "name": "Nasal sinus dx proc NEC"
+    },
+    {
+        "code": "7917",
+        "name": "Cl red-int fix metat/tar"
+    },
+    {
+        "code": "8948",
+        "name": "Pacemaker volt threshold"
+    },
+    {
+        "code": "5296",
+        "name": "Pancreatic anastomosis"
+    },
+    {
+        "code": "7933",
+        "name": "Op red-int fix metac/car"
+    },
+    {
+        "code": "443",
+        "name": "Carpal tunnel release"
+    },
+    {
+        "code": "7934",
+        "name": "Open red-int fix finger"
+    },
+    {
+        "code": "3958",
+        "name": "Repair vess w patch NOS"
+    },
+    {
+        "code": "7864",
+        "name": "Remov imp dev-metac/carp"
+    },
+    {
+        "code": "8085",
+        "name": "Destruct-hip lesion NEC"
+    },
+    {
+        "code": "7785",
+        "name": "Part ostectomy-femur"
+    },
+    {
+        "code": "7855",
+        "name": "Internal fixation-femur"
+    },
+    {
+        "code": "7765",
+        "name": "Loc exc bone les femur"
+    },
+    {
+        "code": "9394",
+        "name": "Nebulizer therapy"
+    },
+    {
+        "code": "8744",
+        "name": "Routine chest x-ray"
+    },
+    {
+        "code": "8703",
+        "name": "C.A.T. scan of head"
+    },
+    {
+        "code": "8938",
+        "name": "Respiratory measure NEC"
+    },
+    {
+        "code": "4232",
+        "name": "Local excis esophag NEC"
+    },
+    {
+        "code": "3171",
+        "name": "Suture of tracheal lacer"
+    },
+    {
+        "code": "5783",
+        "name": "Enterovesico fist repair"
+    },
+    {
+        "code": "4469",
+        "name": "Gastric repair NEC"
+    },
+    {
+        "code": "5631",
+        "name": "Ureteroscopy"
+    },
+    {
+        "code": "8741",
+        "name": "C.A.T. scan of thorax"
+    },
+    {
+        "code": "7859",
+        "name": "Int fix-no fx reduct NEC"
+    },
+    {
+        "code": "8013",
+        "name": "Oth arthrotomy-wrist"
+    },
+    {
+        "code": "8014",
+        "name": "Oth arthrotomy-hand/fngr"
+    },
+    {
+        "code": "4863",
+        "name": "Anterior rect resect NEC"
+    },
+    {
+        "code": "5104",
+        "name": "Cholecystotomy NEC"
+    },
+    {
+        "code": "9756",
+        "name": "Remov pancreatic tube"
+    },
+    {
+        "code": "5293",
+        "name": "Endosc inser panc stent"
+    },
+    {
+        "code": "9762",
+        "name": "Remov ureteral drain"
+    },
+    {
+        "code": "5586",
+        "name": "Renal anastomosis"
+    },
+    {
+        "code": "8875",
+        "name": "Dx ultrasound-urinary"
+    },
+    {
+        "code": "5993",
+        "name": "Replace ureterost tube"
+    },
+    {
+        "code": "3378",
+        "name": "Endo rem bronch devc/sub"
+    },
+    {
+        "code": "4685",
+        "name": "Dilation of intestine"
+    },
+    {
+        "code": "623",
+        "name": "Unilateral orchiectomy"
+    },
+    {
+        "code": "3724",
+        "name": "Pericardial biopsy"
+    },
+    {
+        "code": "605",
+        "name": "Radical prostatectomy"
+    },
+    {
+        "code": "5718",
+        "name": "Other suprapu cystostomy"
+    },
+    {
+        "code": "5789",
+        "name": "Bladder repair NEC"
+    },
+    {
+        "code": "401",
+        "name": "Excision acoustc neuroma"
+    },
+    {
+        "code": "394",
+        "name": "Removal spine stim lead"
+    },
+    {
+        "code": "4502",
+        "name": "Small bowel incision NEC"
+    },
+    {
+        "code": "4195",
+        "name": "Repair of spleen"
+    },
+    {
+        "code": "5784",
+        "name": "Vesic fistula repair NEC"
+    },
+    {
+        "code": "5671",
+        "name": "Urin diversion to bowel"
+    },
+    {
+        "code": "9754",
+        "name": "Remov cholecystost tube"
+    },
+    {
+        "code": "4103",
+        "name": "Allogrft bone marrow NOS"
+    },
+    {
+        "code": "3009",
+        "name": "Destruct larynx les NEC"
+    },
+    {
+        "code": "8456",
+        "name": "Ins or rep cement spacer"
+    },
+    {
+        "code": "4879",
+        "name": "Repair of rectum NEC"
+    },
+    {
+        "code": "8083",
+        "name": "Destruc-wrist lesion NEC"
+    },
+    {
+        "code": "480",
+        "name": "Proctotomy"
+    },
+    {
+        "code": "9227",
+        "name": "Radioactive elem implant"
+    },
+    {
+        "code": "489",
+        "name": "Periph nerve inject NEC"
+    },
+    {
+        "code": "50",
+        "name": "Sympath nerve division"
+    },
+    {
+        "code": "8452",
+        "name": "Insert recombinant BMP"
+    },
+    {
+        "code": "292",
+        "name": "Exc branchial cleft cyst"
+    },
+    {
+        "code": "8302",
+        "name": "Myotomy"
+    },
+    {
+        "code": "3762",
+        "name": "Insrt non-impl circ dev"
+    },
+    {
+        "code": "2311",
+        "name": "Residual root removal"
+    },
+    {
+        "code": "5684",
+        "name": "Close ureter fistula NEC"
+    },
+    {
+        "code": "4682",
+        "name": "Intra-abd lg bowel manip"
+    },
+    {
+        "code": "5303",
+        "name": "Opn dir ing hern-gft NEC"
+    },
+    {
+        "code": "762",
+        "name": "Destruct facial bone les"
+    },
+    {
+        "code": "8627",
+        "name": "Debridement of nail"
+    },
+    {
+        "code": "8709",
+        "name": "Head soft tiss x-ray NEC"
+    },
+    {
+        "code": "9902",
+        "name": "Transfus prev auto blood"
+    },
+    {
+        "code": "4254",
+        "name": "Thorac esophagoenter NEC"
+    },
+    {
+        "code": "3887",
+        "name": "Occlude abd vein NEC"
+    },
+    {
+        "code": "132",
+        "name": "Linear extracap lens ext"
+    },
+    {
+        "code": "8245",
+        "name": "Suture hand tendon NEC"
+    },
+    {
+        "code": "8686",
+        "name": "Onychoplasty"
+    },
+    {
+        "code": "8084",
+        "name": "Destruc-hand jt les NEC"
+    },
+    {
+        "code": "8422",
+        "name": "Finger reattachment"
+    },
+    {
+        "code": "8661",
+        "name": "Full-thick hand skin grf"
+    },
+    {
+        "code": "8291",
+        "name": "Lysis of hand adhesions"
+    },
+    {
+        "code": "5019",
+        "name": "Hepatic dx proc NEC"
+    },
+    {
+        "code": "3843",
+        "name": "Arm ves resect w replace"
+    },
+    {
+        "code": "9543",
+        "name": "Audiological evaluation"
+    },
+    {
+        "code": "5642",
+        "name": "Total ureterectomy"
+    },
+    {
+        "code": "3169",
+        "name": "Other laryngeal repair"
+    },
+    {
+        "code": "8089",
+        "name": "Destruct joint les NEC"
+    },
+    {
+        "code": "8021",
+        "name": "Shoulder arthroscopy"
+    },
+    {
+        "code": "8081",
+        "name": "Destruc-shoulder les NEC"
+    },
+    {
+        "code": "4530",
+        "name": "Endosc destru duoden les"
+    },
+    {
+        "code": "9782",
+        "name": "Remov peritoneal drain"
+    },
+    {
+        "code": "7709",
+        "name": "Sequestrectomy NEC"
+    },
+    {
+        "code": "8854",
+        "name": "Rt & lt heart angiocard"
+    },
+    {
+        "code": "5312",
+        "name": "Opn bil ind ing hern NEC"
+    },
+    {
+        "code": "4054",
+        "name": "Radical groin dissection"
+    },
+    {
+        "code": "3420",
+        "name": "Thoracoscopic pleural bx"
+    },
+    {
+        "code": "5425",
+        "name": "Peritoneal lavage"
+    },
+    {
+        "code": "613",
+        "name": "Scrotal les destruction"
+    },
+    {
+        "code": "6496",
+        "name": "Remove int penile prosth"
+    },
+    {
+        "code": "3691",
+        "name": "Coron vess aneurysm rep"
+    },
+    {
+        "code": "7901",
+        "name": "Closed fx reduct humerus"
+    },
+    {
+        "code": "1424",
+        "name": "Chorioret les laser coag"
+    },
+    {
+        "code": "5475",
+        "name": "Mesenteric repair NEC"
+    },
+    {
+        "code": "781",
+        "name": "Oth part excision thymus"
+    },
+    {
+        "code": "231",
+        "name": "Ventricl shunt-head/neck"
+    },
+    {
+        "code": "7817",
+        "name": "Appl ext fix-tib/fibula"
+    },
+    {
+        "code": "8892",
+        "name": "Mri chest & heart"
+    },
+    {
+        "code": "7905",
+        "name": "Cl fx reduc-femur"
+    },
+    {
+        "code": "3552",
+        "name": "Pros repair atria def-cl"
+    },
+    {
+        "code": "6952",
+        "name": "Aspirat curet-post deliv"
+    },
+    {
+        "code": "64",
+        "name": "Complete thyroidectomy"
+    },
+    {
+        "code": "5302",
+        "name": "Opn rep ind ing hern NEC"
+    },
+    {
+        "code": "3889",
+        "name": "Occlude leg vein NEC"
+    },
+    {
+        "code": "782",
+        "name": "Oth totl excision thymus"
+    },
+    {
+        "code": "3402",
+        "name": "Exploratory thoracotomy"
+    },
+    {
+        "code": "3882",
+        "name": "Occlus head/neck ves NEC"
+    },
+    {
+        "code": "5793",
+        "name": "Control bladd hemorrhage"
+    }
+]

@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}MEDIPREDICT - Trang chủ{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <img src="{% static 'images/medical.jpg' %}" alt="Medical Background" class="bg-image">
+    <div class="container">
+        <h1>Hệ thống dự đoán y tế</h1>
+        <p>Ứng dụng Trí tuệ nhân tạo để phân tích bệnh án và hỗ trợ dự đoán các sự kiện y khoa, giúp nâng cao hiệu quả ra quyết định và tối ưu hóa chăm sóc bệnh nhân.</p>
+        <div class="hero-actions">
+            <a href="#disease-prediction-section" class="btn btn-primary">Khám phá ngay <i class="fas fa-chevron-down"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================= -->
+<!-- 1) DOWNSTREAM – DỰ ĐOÁN BỆNH -->
+<!-- ============================= -->
+<section id="disease-prediction-section" class="feature-showcase">
+    <div class="container">
+        <div class="showcase-grid">
+            <div class="showcase-image">
+                <div class="image-wrapper">
+                    <img src="{% static 'images/predict-disease.jpg' %}" alt="Dự đoán bệnh">
+                </div>
+            </div>
+            <div class="showcase-content">
+                <span class="tagline">DỰ ĐOÁN DIỄN TIẾN</span>
+                <h2>Dự đoán bệnh trong lần khám tới</h2>
+                <p>
+                    Hệ thống phân tích lịch sử bệnh án của bệnh nhân để dự đoán nguy cơ các bệnh có thể xuất hiện trong lần khám tiếp theo, bao gồm cả các bệnh phổ biến như bệnh tim và các bệnh ít gặp như Parkinson.
+                </p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Dự đoán nguy cơ bệnh tim, Parkinson và nhiều bệnh khác.</li>
+                    <li><i class="fas fa-check-circle"></i> Giúp theo dõi sức khỏe và phát hiện sớm rủi ro.</li>
+                    <li><i class="fas fa-check-circle"></i> Mang đến góc nhìn dự đoán để chủ động hơn trong chuẩn bị điều trị.</li>
+                </ul>
+                <a href="{% url 'predict_disease:index' %}" class="btn btn-accent">
+                    Thử nghiệm Dự đoán Bệnh <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =============================================== -->
+<!-- 2) DUAL MTGAN – DỰ ĐOÁN THỦ THUẬT TỪ CHẨN ĐOÁN -->
+<!-- =============================================== -->
+<section id="procedure-prediction-section" class="feature-showcase bg-white">
+    <div class="container">
+        <div class="showcase-grid layout-reversed">
+            <div class="showcase-image">
+                <div class="image-wrapper">
+                    <img src="{% static 'images/predict-procedure.jpg' %}" alt="Dự đoán thủ thuật">
+                </div>
+            </div>
+            <div class="showcase-content">
+                <span class="tagline">HỖ TRỢ CAN THIỆP</span>
+                <h2>Dự đoán thủ thuật y khoa phù hợp</h2>
+                <p>Hệ thống sử dụng mô hình Dual MTGAN để học mối quan hệ giữa chẩn đoán và thủ thuật trong dữ liệu EHR synthetic. Dựa trên chẩn đoán đầu vào, AI sẽ gợi ý những thủ thuật thường gặp và phù hợp nhất.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Gợi ý thủ thuật phù hợp dựa trên chẩn đoán.</li>
+                    <li><i class="fas fa-check-circle"></i> Hỗ trợ bác sĩ và điều dưỡng chuẩn bị can thiệp.</li>
+                    <li><i class="fas fa-check-circle"></i> Tăng tính chủ động trong theo dõi và điều trị.</li>
+                </ul>
+                <a href="{% url 'predictproc:procedure_page' %}" class="btn btn-accent">
+                    Thử nghiệm Dự đoán Thủ thuật <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section id="features" class="features-section">
+    <div class="container">
+        <h2>Tại sao nên chọn MEDIPREDICT?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Hỗ trợ ra quyết định</h3>
+                <p>Cung cấp các gợi ý lâm sàng dựa trên phân tích dữ liệu, giúp bác sĩ có thêm thông tin tham khảo khi đánh giá bệnh nhân.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-database"></i>
+                <h3>Dữ liệu an toàn</h3>
+                <p>Toàn bộ mô hình được huấn luyện trên dữ liệu EHR synthetic sinh bởi MTGAN – đảm bảo không chứa thông tin bệnh nhân thật.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Tăng cường mô hình dự đoán</h3>
+                <p>Dữ liệu synthetic giúp cải thiện hiệu quả huấn luyện các mô hình downstream, đặc biệt trong các bệnh hiếm.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

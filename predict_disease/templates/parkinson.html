@@ -1,0 +1,480 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dự báo Diễn tiến Bệnh Parkinson - MEDIPREDICT{% endblock %}
+
+{% block content %}
+<!-- Link file CSS -->
+<link rel="stylesheet" href="{% static 'css/hf_pd.css' %}">
+
+<!-- PHẦN 1: HERO HEADER -->
+<section class="predict-hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-overlay"></div>
+    <div class="container position-relative z-2">
+        <!-- === THÊM ĐOẠN NÀY === -->
+        <div class="hero-top-action">
+            <a href="{% url 'predict_disease:index' %}" class="btn-back-glass">
+                <i class="fas fa-arrow-left"></i> Quay lại
+            </a>
+        </div>
+        <!-- ====================== -->
+        <div class="hero-content">
+            <span class="tagline"><i class="fas fa-brain"></i> AI </span>
+            <h1>Dự báo nguy cơ Parkinson</h1>
+            <p>Phân tích chuỗi lịch sử khám bệnh để dự báo nguy cơ Parkinson trong lần tái khám tiếp theo.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PHẦN 2: NỘI DUNG FORM -->
+<section class="prediction-content">
+    <div class="container two-column-layout">
+
+        <!-- LEFT: FORM NHẬP BỆNH -->
+        <div class="column-left card-effect">
+            <div class="form-header-custom">
+                <div class="header-icon-box">
+                    <i class="fas fa-file-medical"></i>
+                </div>
+                <div class="header-text-box">
+                    <h2>Dữ liệu lâm sàng</h2>
+                    <p>Nhập mã ICD-9 hoặc tên bệnh theo thứ tự thời gian</p>
+                </div>
+            </div>
+            <hr class="custom-divider">
+
+            <form method="POST" action="" id="predictionForm">
+                {% csrf_token %}
+
+                <!-- BƯỚC 1: NHẬP SỐ LẦN KHÁM (Giao diện mới) -->
+                <div class="input-visit-wrapper custom-stepper-area">
+                    <label class="stepper-label">Số lần bệnh nhân đã đến khám?</label>
+                    
+                    <div class="number-input-group-custom">
+                        <!-- Nút trừ (Màu xám nhạt) -->
+                        <button type="button" class="btn-step btn-minus" onclick="adjustValue(-1)">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        
+                        <!-- Ô nhập số -->
+                        <input type="number" id="num_visits_input" class="form-control input-num-visits-custom" 
+                            value="{% if submitted_visits %}{{ submitted_visits|length }}{% else %}0{% endif %}" 
+                            placeholder="0" min="0" max="10" readonly>
+                        
+                        <!-- Nút cộng (Màu xanh nổi bật) -->
+                        <button type="button" class="btn-step btn-plus" onclick="adjustValue(1)">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    
+                    <p class="stepper-note">Tối đa 10 lần gần nhất</p>
+                </div>
+
+                <!-- BƯỚC 2: AUTOCOMPLETE ICD -->
+                <div id="visits_container" class="fade-in-area"></div>
+
+                <!-- Input ẩn -->
+                <input type="hidden" name="total_visits" id="total_visits_hidden">
+
+                <!-- Nút Submit -->
+                <button type="submit" class="btn-submit" id="btnSubmit" style="display: none;">
+                    <span>CHẠY PHÂN TÍCH</span> <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- RIGHT: KẾT QUẢ -->
+        <div class="column-right card-effect">
+            {% if result %}
+                <div class="result-header">
+                    <div class="header-badge">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Kết quả phân tích</h3>
+                </div>
+
+                <div class="result-body">
+                    <!-- Thẻ hiển thị Rủi ro chính -->
+                    <div class="risk-card-modern {{ result.prediction_class }}">
+                        <div class="risk-status-icon">
+                            {% if result.prediction_class == 'risk-high' %}
+                                <i class="fas fa-brain"></i>
+                            {% elif result.prediction_class == 'risk-medium' %}
+                                <i class="fas fa-exclamation-circle"></i>
+                            {% else %}
+                                <i class="fas fa-shield-virus"></i>
+                            {% endif %}
+                        </div>
+                        <div class="risk-content">
+                            <span class="risk-label">Đánh giá nguy cơ</span>
+                            <h4 class="risk-title">{{ result.prediction_text }}</h4>
+                        </div>
+                    </div>
+
+                    <!-- Khu vực hiển thị chỉ số chi tiết -->
+                    <div class="metrics-grid">
+                        <!-- Cột 1: Vòng tròn phần trăm -->
+                        <div class="metric-box probability-box">
+                            <div class="circular-chart-wrapper">
+                                <svg class="progress-ring" width="110" height="110">
+                                    <!-- Vòng nền mờ -->
+                                    <circle class="progress-ring__circle-bg" stroke="#f0f2f5" stroke-width="8" fill="transparent" r="48" cx="55" cy="55"/>
+                                    
+                                    <!-- Vòng chạy phần trăm (Thêm stroke-linecap="round" cho đẹp) -->
+                                    <circle class="progress-ring__circle" 
+                                            stroke="{% if result.prediction_class == 'risk-high' %}#e53935{% elif result.prediction_class == 'risk-medium' %}#fb8c00{% else %}#43a047{% endif %}" 
+                                            stroke-width="8" 
+                                            stroke-linecap="round" 
+                                            fill="transparent" r="48" cx="55" cy="55" 
+                                            style="stroke-dasharray: 301; stroke-dashoffset: calc(301 - (301 * {{ result.probability }}) / 100); transition: stroke-dashoffset 1s ease-out;"/>
+                                </svg>
+                                <div class="probability-text-center">
+                                    <span class="prob-num">{{ result.probability }}<small>%</small></span>
+                                </div>
+                            </div>
+                            <span class="metric-caption">Tỷ lệ dự báo</span>
+                        </div>
+
+                        <!-- Cột 2: Số lần khám -->
+                        <div class="metric-box visit-count-box">
+                            <div class="icon-wrapper-styled"> <!-- Dùng wrapper để canh chỉnh icon đẹp hơn -->
+                                <div class="icon-stat">
+                                    <i class="fas fa-file-medical-alt"></i> <!-- Đổi icon cho hợp ngữ cảnh hơn -->
+                                </div>
+                            </div>
+                            <span class="stat-value">{{ result.num_visits }}</span>
+                            <span class="metric-caption">Số Lần khám</span>
+                        </div>
+                    </div>
+
+                    <!-- Disclaimer (Thông báo miễn trừ trách nhiệm) -->
+                    <div class="dash-footer">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>Kết quả chỉ mang tính tham khảo y khoa.</span>
+                    </div>
+                </div>
+            {% else %}
+                <!-- Placeholder: Trạng thái chờ đẹp hơn -->
+                <div class="result-placeholder empty-state-card">
+                    <div class="placeholder-icon-wrapper">
+                        <div class="icon-pulse-ring"></div>
+                        <div class="placeholder-img-modern">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    
+                    <h4 class="empty-title">AI Sẵn Sàng</h4>
+                    <p class="empty-desc">
+                        Chưa có dữ liệu phân tích. <br>
+                        Vui lòng nhập lịch sử khám bệnh bên trái và bấm 
+                        <strong>"Chạy Phân Tích"</strong>.
+                    </p>
+                    
+                    <!-- Mũi tên chỉ dẫn tượng trưng -->
+                    <div class="instruction-arrow">
+                        <i class="fas fa-long-arrow-alt-left"></i> Nhập bên này
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+    </div>
+</section>
+
+
+
+<script>
+    // Lấy dữ liệu từ Backend gửi về (nếu có)
+    let submittedData = {};
+    try {
+        const rawJson = '{{ submitted_visits_json|escapejs }}';
+        if (rawJson) {
+            submittedData = JSON.parse(rawJson);
+        }
+    } catch (e) {
+        console.error("Lỗi parse JSON:", e);
+    }
+
+    // Kiểm tra xem đã có kết quả chưa để khóa form (nếu muốn)
+    const isLocked = {% if result %} {{ result.locked|yesno:"true,false" }} {% else %} false {% endif %};
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const numInput = document.getElementById('num_visits_input');
+    const container = document.getElementById('visits_container');
+    const btnSubmit = document.getElementById('btnSubmit');
+    const hiddenInput = document.getElementById('total_visits_hidden');
+
+    let diagList = []; // Biến toàn cục chứa danh sách bệnh
+
+    // 1. Tải dữ liệu bệnh JSON
+    fetch("{% static 'data/diag_list_1500.json' %}")
+        .then(response => response.json())
+        .then(data => {
+            diagList = data;
+            // SAU KHI TẢI XONG DATA MỚI TIẾN HÀNH KHÔI PHỤC GIAO DIỆN
+            restoreSubmittedData();
+        })
+        .catch(err => console.error("Lỗi tải diag_list:", err));
+
+    // 2. Logic điều chỉnh số lần khám (+/-)
+    window.adjustValue = function(delta) {
+        if(isLocked) return; // Nếu đã khóa thì không cho sửa
+        let val = parseInt(numInput.value) || 0;
+        val += delta;
+        if (val < 0) val = 0;
+        if (val > 10) val = 10;
+        numInput.value = val;
+        // Trigger sự kiện input để vẽ lại giao diện
+        numInput.dispatchEvent(new Event('input'));
+    }
+
+    // 3. Sự kiện khi thay đổi số lần khám
+    numInput.addEventListener('input', function () {
+        const count = parseInt(this.value);
+        container.innerHTML = ''; // Xóa cũ
+
+        if (count > 0 && count <= 10) {
+            hiddenInput.value = count;
+            btnSubmit.style.display = 'flex'; 
+
+            for (let i = 1; i <= count; i++) {
+                createVisitCard(i);
+                enableDiagInputForVisit(i); // Khởi tạo logic trống
+            }
+        } else {
+            btnSubmit.style.display = 'none';
+        }
+    });
+
+    // --- CÁC HÀM HỖ TRỢ ---
+
+    // Hàm khôi phục dữ liệu sau khi bấm Predict
+    function restoreSubmittedData() {
+        // Nếu không có dữ liệu cũ thì thôi
+        if (!submittedData || Object.keys(submittedData).length === 0) return;
+
+        console.log("🔄 Đang khôi phục dữ liệu bệnh:", submittedData);
+
+        const count = Object.keys(submittedData).length;
+        
+        // Cập nhật ô nhập số lượng và input ẩn
+        numInput.value = count;
+        hiddenInput.value = count;
+        btnSubmit.style.display = 'flex';
+        container.innerHTML = ''; // Reset container
+
+        // Vòng lặp tái tạo từng lần khám
+        for (let i = 1; i <= count; i++) {
+            createVisitCard(i); // 1. Tạo khung
+
+            // 2. Lấy danh sách mã bệnh dạng chuỗi "4019, 25000" -> Tách thành mảng
+            let codeString = submittedData[`visit_${i}`];
+            let initialItems = [];
+
+            if (codeString) {
+                let codes = codeString.split(",");
+                codes.forEach(code => {
+                    code = code.trim();
+                    // Tìm object bệnh đầy đủ trong diagList dựa vào mã code
+                    let item = diagList.find(d => d.code === code);
+                    if (item) {
+                        initialItems.push(item);
+                    } else {
+                        // Fallback nếu không tìm thấy tên bệnh trong JSON
+                        initialItems.push({ code: code, name: "Không xác định" });
+                    }
+                });
+            }
+
+            // 3. Kích hoạt logic và điền sẵn bệnh vào
+            enableDiagInputForVisit(i, initialItems);
+        }
+
+        // Nếu có kết quả rồi thì khóa form lại
+        if (isLocked) {
+            setTimeout(disableAllInputs, 100);
+        }
+    }
+
+    // Hàm tạo HTML khung thẻ khám
+    function createVisitCard(i) {
+        const div = document.createElement('div');
+        div.className = 'visit-card';
+        div.innerHTML = `
+            <div class="visit-header-line">
+                <div class="visit-icon"><i class="far fa-calendar-check"></i></div>
+                <label class="visit-label">Lần khám thứ ${i}</label>
+            </div>
+            <div class="autocomplete-box">
+                <input type="text" id="diagInput_${i}" 
+                       class="form-control visit-input"
+                       placeholder="Nhập mã ICD hoặc tên bệnh..." autocomplete="off">
+                <div id="autocompleteList_${i}" class="autocomplete-results"></div>
+            </div>
+            <!-- Đây là nơi chứa các thẻ bệnh (Grid 2 cột) -->
+            <div id="tagArea_${i}" class="diagnosis-tag-area"></div>
+        `;
+        container.appendChild(div);
+    }
+
+    // Hàm xử lý logic Autocomplete và Tag (Có hỗ trợ dữ liệu ban đầu initialData)
+    function enableDiagInputForVisit(v, initialData = []) {
+        const input = document.getElementById(`diagInput_${v}`);
+        const listBox = document.getElementById(`autocompleteList_${v}`);
+        const tagArea = document.getElementById(`tagArea_${v}`);
+        
+        const selectedDiagnoses = new Map(); // Lưu trữ để chống trùng lặp
+
+        // Hàm vẽ 1 thẻ bệnh (Đúng chuẩn HTML cho Grid 2 cột)
+        const renderSingleTag = (item) => {
+            const tag = document.createElement('div');
+            tag.className = 'diagnosis-tag'; 
+            
+            // CẤU TRÚC HTML MỚI: Tách Code và Name ra riêng
+            tag.innerHTML = `
+                <div class="tag-info">
+                    <span class="tag-badge shadow-effect">${item.code}</span>
+                    <span class="tag-name" title="${item.name}">${item.name}</span>
+                </div>
+                <button type="button" class="remove-tag-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+
+            // Sự kiện xóa tag (Giữ nguyên)
+            tag.querySelector('.remove-tag-btn').onclick = () => {
+                if(!input.disabled) { 
+                    selectedDiagnoses.delete(item.code);
+                    tag.remove();
+                }
+            };
+            
+            tagArea.appendChild(tag);
+        }
+
+        // Hàm thêm bệnh vào danh sách
+        const addDiagnosis = item => {
+            if (!selectedDiagnoses.has(item.code)) {
+                selectedDiagnoses.set(item.code, item);
+                renderSingleTag(item);
+            }
+            input.value = '';
+            listBox.style.display = 'none';
+        };
+
+        // --- KHÔI PHỤC DỮ LIỆU CŨ (Nếu có) ---
+        if (initialData.length > 0) {
+            initialData.forEach(item => {
+                // Thêm vào Map và vẽ lên UI ngay lập tức
+                selectedDiagnoses.set(item.code, item);
+                renderSingleTag(item);
+            });
+        }
+
+        // --- XỬ LÝ SỰ KIỆN NHẬP LIỆU ---
+        
+        // 1. Nhập Enter (Paste nhiều mã)
+        input.addEventListener("keydown", function(e) {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                const raw = input.value.trim();
+                if (!raw) return;
+                const parts = raw.split(/[, ]+/);
+                parts.forEach(code => {
+                    code = code.trim();
+                    const item = diagList.find(d => d.code === code);
+                    if (item) addDiagnosis(item);
+                });
+                input.value = '';
+            }
+        });
+
+        // 2. Gõ phím tìm kiếm (Autocomplete)
+        input.addEventListener('input', function () {
+            const text = this.value.toLowerCase().trim();
+            if (!text) {
+                listBox.style.display = 'none';
+                return;
+            }
+            // Lọc danh sách (Tối đa 7 kết quả)
+            const filtered = diagList.filter(item =>
+                !selectedDiagnoses.has(item.code) &&
+                (item.code.toLowerCase().includes(text) || item.name.toLowerCase().includes(text))
+            ).slice(0, 7);
+
+            if (filtered.length === 0) {
+                listBox.style.display = 'none';
+                return;
+            }
+
+            listBox.innerHTML = filtered.map(item => `
+                <div class="autocomplete-item" data-code="${item.code}">
+                    <span class="ac-code">${item.code}</span>
+                    <span class="ac-name">${item.name}</span>
+                </div>`
+            ).join('');
+            
+            listBox.style.display = 'block';
+
+            // Click chọn từ dropdown
+            listBox.querySelectorAll('.autocomplete-item').forEach(div => {
+                div.onclick = () => {
+                    const item = diagList.find(i => i.code === div.dataset.code);
+                    if (item) addDiagnosis(item);
+                };
+            });
+        });
+
+        // Click ra ngoài thì đóng dropdown
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(`#diagInput_${v}`) && !e.target.closest(`#autocompleteList_${v}`)) {
+                listBox.style.display = "none";
+            }
+        });
+    }
+
+    // Xử lý khi bấm SUBMIT FORM
+    document.getElementById('predictionForm').addEventListener('submit', function (e) {
+        const count = parseInt(hiddenInput.value || "0");
+        
+        // Duyệt qua từng lần khám để gom dữ liệu
+        for (let i = 1; i <= count; i++) {
+            // Lấy mã code từ UI (để đảm bảo chính xác những gì đang hiển thị)
+            const tags = document.querySelectorAll(`#tagArea_${i} .tag-badge`);
+            const codes = Array.from(tags).map(t => t.textContent.trim());
+
+            // Tạo input hidden gửi về server: name="visit_1" value="4019,25000"
+            const hidden = document.createElement("input");
+            hidden.type = "hidden";
+            hidden.name = `visit_${i}`;
+            hidden.value = codes.join(",");
+            this.appendChild(hidden);
+        }
+    });
+
+    // Hàm khóa form khi đã có kết quả
+    function disableAllInputs() {
+        document.querySelectorAll(".visit-input").forEach(inp => inp.disabled = true);
+        document.querySelectorAll("button[onclick^='adjustValue']").forEach(btn => btn.disabled = true);
+        numInput.disabled = true;
+        
+        // Đổi nút submit thành nút Reset
+        const btnSubmit = document.getElementById("btnSubmit");
+        btnSubmit.innerHTML = `<span><i class="fas fa-redo"></i> KIỂM TRA MỚI</span>`;
+        btnSubmit.classList.add('btn-secondary');
+        
+        // Chặn submit form, đổi thành reload trang
+        btnSubmit.onclick = function(e){
+            e.preventDefault();
+            window.location.href = window.location.pathname; // Reload trang sạch
+        };
+
+        // Ẩn các nút xóa tag
+        document.querySelectorAll(".remove-tag-btn").forEach(btn => btn.style.display = "none");
+    }
+});
+</script>
+{% endblock %}

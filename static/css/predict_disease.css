@@ -1,0 +1,567 @@
+:root {
+    --primary-color: #00bcd4; /* Aqua Blue */
+    --secondary-color: #ff9800; /* Orange/Amber accent */
+    --text-dark: #263238; /* Darker blue-grey */
+    --text-light: #ffffff;
+    --bg-light: #f4f6f9; /* Light grey background */
+    --card-bg: #ffffff;
+    --font-primary: 'Be Vietnam Pro', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    --border-radius-lg: 15px;
+    --border-radius-sm: 8px;
+    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.3s ease;
+}
+
+
+
+/* ========================================= */
+/* === PHẦN 1: HERO HEADER (PHONG CÁCH RIÊNG) === */
+/* ========================================= */
+.prediction-hero {
+    position: relative;
+    /* Sử dụng gradient Teal đậm chất y tế, pha trộn với màu Primary của root */
+    background: linear-gradient(135deg, #006064 0%, var(--primary-color) 100%); 
+    color: var(--text-light);
+    padding: 60px 0 120px 0; /* Padding dưới lớn để chừa chỗ cho Grid đè lên */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Hiệu ứng nền Pattern chấm tròn */
+.prediction-hero .hero-bg-pattern {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.prediction-hero .tagline {
+    display: inline-block;
+    font-family: var(--font-secondary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.prediction-hero h1 {
+    font-family: var(--font-primary); /* Đồng bộ font với trang chủ */
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.prediction-hero p {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    font-weight: 300;
+    max-width: 650px;  /* 👈 tránh dài hơn tiêu đề */
+    margin: 0 auto;    /* 👈 căn giữa */
+    text-align: center;
+}
+
+/* ========================================= */
+/* === PHẦN 2: CONTENT & GRID === */
+/* ========================================= */
+.prediction-content {
+    background-color: var(--bg-light); /* Kế thừa màu nền xám nhạt */
+    padding-bottom: 100px;
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: -100px; /* Kỹ thuật Negative Margin: Kéo grid lên đè vào Hero */
+    position: relative;
+    z-index: 10;
+}
+
+/* --- CARD DESIGN --- */
+.task-card {
+    background: var(--card-bg);
+    border-radius: 16px; /* Bo góc lớn hơn một chút so với trang chủ để mềm mại hơn */
+    padding: 30px 20px;
+    text-decoration: none;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    
+    /* Box Shadow nhẹ nhàng ban đầu */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+
+    /* Transition mượt mà cho hover */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                border-color 0.3s ease;
+    
+}
+
+/* Delay cho từng card để tạo hiệu ứng thác đổ */
+.task-card:nth-child(1) { animation-delay: 0.1s; }
+.task-card:nth-child(2) { animation-delay: 0.2s; }
+.task-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* --- HOVER EFFECT CHO CARD --- */
+.task-card:hover {
+    transform: translateY(-15px); /* Nổi lên cao */
+    box-shadow: 0 20px 40px rgba(0, 188, 212, 0.15); /* Bóng màu xanh nhạt */
+    border-color: rgba(0, 188, 212, 0.3);
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- ICON STYLING --- */
+.icon-wrapper {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+/* Vòng tròn mờ phía sau icon */
+.icon-wrapper::after {
+    content: ''; position: absolute;
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    opacity: 0.2;
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+}
+
+/* Hiệu ứng Icon khi hover Card cha */
+.task-card:hover .icon-wrapper { transform: scale(1.1); }
+.task-card:hover .icon-wrapper::after { transform: scale(1.4); opacity: 0; }
+
+/* --- MÀU SẮC RIÊNG BIỆT (THEME COLORS) --- */
+
+/* 1. TIM MẠCH (Hồng/Đỏ) */
+.card-heart .icon-wrapper { background: #fce4ec; color: #e91e63; }
+.card-heart:hover .icon-wrapper { background: #e91e63; color: #fff; box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3); }
+
+/* 2. PARKINSON (Cam - Giống Secondary Color) */
+.card-brain .icon-wrapper { background: #fff3e0; color: #ff9800; }
+.card-brain:hover .icon-wrapper { background: #ff9800; color: #fff; box-shadow: 0 10px 20px rgba(255, 152, 0, 0.3); }
+
+/* 3. LẦN KHÁM TỚI (Xanh Aqua - Giống Primary Color) */
+.card-notes .icon-wrapper { background: #e0f7fa; color: #00bcd4; }
+.card-notes:hover .icon-wrapper { background: #00bcd4; color: #fff; box-shadow: 0 10px 20px rgba(0, 188, 212, 0.3); }
+
+/* --- TYPOGRAPHY TRONG CARD --- */
+.task-card h3 { 
+    font-family: var(--font-primary);
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.task-card p { 
+    font-family: var(--font-secondary);
+    font-size: 1rem; 
+    color: #546e7a; /* Xám xanh dễ đọc */
+    line-height: 1.6; 
+    margin-bottom: 30px;
+}
+
+/* --- NÚT BẤM DƯỚI CARD --- */
+.card-footer-custom {
+    width: 100%;
+}
+
+.btn-task {
+    font-family: var(--font-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: #f5f7fa;
+    color: #455a64;
+    font-size: 0.95rem;
+}
+.btn-task i { margin-left: 8px; transition: transform 0.3s; }
+
+/* Đổi màu nút khi hover vào Card cha */
+.card-heart:hover .btn-task { background: #e91e63; color: white; box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3); }
+.card-brain:hover .btn-task { background: #ff9800; color: white; box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3); }
+.card-notes:hover .btn-task { background: #00bcd4; color: white; box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3); }
+
+.task-card:hover .btn-task i { transform: translateX(5px); }
+
+/* --- KEYFRAMES ANIMATION --- */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .prediction-hero h1 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .prediction-hero { padding: 80px 0 60px 0; }
+    .prediction-hero h1 { font-size: 2.2rem; }
+    
+    .task-grid { 
+        margin-top: 0; /* Trên mobile bỏ margin âm để không bị lỗi layout */
+        gap: 20px; 
+    } 
+    
+    .task-card {
+        padding: 30px 20px;
+    }
+}
+
+
+/* =========================================
+   GLOBAL AREA BACKGROUND
+========================================= */
+.prediction-content {
+    background-color: #f0f4f8;
+    padding-bottom: 60px;
+}
+
+/* =========================================
+   LAYOUT 2 CỘT
+========================================= */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 58% 42%;
+    gap: 35px;
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+}
+
+.column-left {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 26px 28px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.08);
+}
+
+.column-right {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 26px 28px;
+    border-left: 6px solid #0288d1;
+    box-shadow: 0px 8px 20px rgba(2,136,209,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 280px;
+}
+
+/* =========================================
+   HEADER FORM
+========================================= */
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eceff1;
+    padding-bottom: 15px;
+}
+
+.form-header h2 {
+    color: #01579b;
+    font-weight: 900;
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+}
+
+.form-header p {
+    color: #607d8b;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   INPUT SỐ LẦN KHÁM
+========================================= */
+.input-num-visits {
+    max-width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #01579b;
+    border: 2px solid #81d4fa;
+    background: #e1f5fe;
+}
+
+/* INPUT TEXT LIVES */
+.form-control,
+.visit-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fcfdfe;
+    transition: 0.25s;
+}
+
+.form-control:focus,
+.visit-input:focus {
+    border-color: #0288d1;
+    box-shadow: 0 0 0 4px rgba(2,136,209,0.12);
+    outline: none;
+}
+
+/* =========================================
+   CARD LẦN KHÁM
+========================================= */
+.visit-card {
+    background: #ffffff;
+    border: 1px solid #e0f2f1;
+    border-left: 5px solid #0097a7;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 18px;
+    animation: fadeIn 0.25s ease-out;
+}
+
+.visit-label {
+    font-family: var(--font-primary);
+    font-weight: 800;
+    color: #006064;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+.visit-input:disabled {
+    background: #eee;
+    cursor: not-allowed;
+    color: #777;
+}
+
+
+.tag-code {
+    font-family: var(--font-primary);
+    font-size: 0.92rem;
+    margin-right: 6px;
+    border-right: 1px solid rgba(255,255,255,0.4);
+    padding-right: 6px;
+}
+
+.tag-name {
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 4px;
+}
+.risk-tag {
+    font-family: var(--font-primary);
+    font-weight: 900;
+    font-size: 1.55rem;
+    text-align: center;
+    padding: 14px 22px;
+    border-radius: 12px;
+    margin: 18px auto;
+    width: 100%;
+    max-width: 420px;
+    border: 2px solid;
+}
+
+/* Màu sắc theo mức độ */
+.risk-low {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 2px solid #43a047;
+}
+
+.risk-medium {
+    background: #fff3cd;
+    color: #b38200;
+    border: 2px solid #ffca28;
+}
+
+.risk-high {
+    background: #ffebee;
+    color: #c62828;
+    border: 2px solid #e53935;
+}
+
+
+/* =========================================
+   AUTOCOMPLETE
+========================================= */
+.autocomplete-box {
+    position: relative;
+    margin-top: 4px;
+}
+
+.autocomplete-results {
+    position: absolute;
+    z-index: 2000;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    max-height: 260px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+}
+
+.autocomplete-item {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.autocomplete-item:hover {
+    background: #b2ebf2;
+}
+
+/* =========================================
+   TAG ICD
+========================================= */
+.diagnosis-tag-area {
+    margin-top: 14px;
+    background: #f1f8e9;
+    border: 1px solid #c5e1a5;
+    border-radius: 6px;
+    padding: 12px;
+    min-height: 58px;   /* thêm dòng này */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.diagnosis-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #26a69a, #00796b);
+    color: white;
+}
+
+.remove-tag-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    margin-left: 6px;
+    cursor: pointer;
+    opacity: 0.85;
+}
+.remove-tag-btn:hover {
+    opacity: 1;
+}
+
+/* =========================================
+   NÚT SUBMIT
+========================================= */
+.btn-submit {
+    font-family: var(--font-primary);
+    background: linear-gradient(45deg, #ff4081, #d81b60);
+    color: white;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(216,27,96,0.35);
+}
+
+/* =========================================
+   KẾT QUẢ DỰ BÁO
+========================================= */
+.result-box {
+    border-left: 6px solid #4caf50;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    animation: fadeIn 0.4s ease-in;
+}
+.result-box.risk-high {
+    border-left-color: #f44336;
+}
+
+/* =========================================
+   PLACEHOLDER (chưa có kết quả)
+========================================= */
+.result-placeholder {
+    text-align: center;
+    color: #90a4ae;
+}
+.icon-placeholder {
+    font-size: 54px;
+    margin-bottom: 12px;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 800px) {
+    .two-column-layout {
+        grid-template-columns: 100%;
+    }
+}
