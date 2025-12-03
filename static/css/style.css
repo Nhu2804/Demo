@@ -706,3 +706,25 @@ z-index: 1;
         margin-top: 25px;
     }
 }
+
+
+/* Ẩn thanh banner của Google trên cùng */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+} 
+body {
+    top: 0px !important; 
+}
+/* Ẩn tooltip khi di chuột vào chữ đã dịch */
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+/* Xóa hiệu ứng hover/bôi xanh của Google */
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
